@@ -1,6 +1,6 @@
 {
   "success": true,
-  "timestamp": "2026-01-08T11:50:24.172Z",
+  "timestamp": "2026-01-08T11:59:20.009Z",
   "data": {
     "visits": [
       {
@@ -44,9 +44,39 @@
         "data": "07/01/2026",
         "Luogo": "Via Monginevro ",
         "note": "Comple sale"
+      },
+      {
+        "Informazioni cronologiche": "08/01/2026 12.56.47",
+        "Nome": "Ale",
+        "data": "01/01/2026",
+        "Luogo": "monginegro",
+        "note": "NHH"
       }
     ],
     "players": [
+      {
+        "name": "Ale",
+        "total": 2,
+        "streak": 1,
+        "level": {
+          "number": 1,
+          "name": "Principiante",
+          "color": "#808080",
+          "min": 0,
+          "max": 5
+        },
+        "firstVisit": "2026-01-01",
+        "lastVisit": "2026-01-07",
+        "topLocations": [
+          "mongi fuegooo",
+          "monginegro"
+        ],
+        "locationsCount": 2,
+        "notesCount": 2,
+        "monthlyAverage": "2.0",
+        "favoriteTime": "Pranzo",
+        "avatar": "assets/avatars/ale.jpg"
+      },
       {
         "name": "Kej",
         "total": 2,
@@ -91,28 +121,6 @@
         "monthlyAverage": 0,
         "favoriteTime": "Mattina",
         "avatar": "assets/avatars/fabio.jpg"
-      },
-      {
-        "name": "Ale",
-        "total": 1,
-        "streak": 1,
-        "level": {
-          "number": 1,
-          "name": "Principiante",
-          "color": "#808080",
-          "min": 0,
-          "max": 5
-        },
-        "firstVisit": "2026-01-07",
-        "lastVisit": "2026-01-07",
-        "topLocations": [
-          "mongi fuegooo"
-        ],
-        "locationsCount": 1,
-        "notesCount": 1,
-        "monthlyAverage": 0,
-        "favoriteTime": "Pranzo",
-        "avatar": "assets/avatars/ale.jpg"
       },
       {
         "name": "Easy",
@@ -160,11 +168,11 @@
       }
     ],
     "stats": {
-      "totalVisits": 6,
+      "totalVisits": 7,
       "totalPlayers": 5,
-      "startDate": "2026-01-02",
-      "topPlayer": "Kej",
-      "lastUpdate": "2026-01-08T11:50:24.172Z"
+      "startDate": "2026-01-01",
+      "topPlayer": "Ale",
+      "lastUpdate": "2026-01-08T11:59:20.008Z"
     }
   }
 }
