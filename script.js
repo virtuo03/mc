@@ -153,10 +153,92 @@ class McRankingJSONApp {
             clone.querySelector('.player-rank').textContent = `#${index + 1}`;
             clone.querySelector('.player-rank').style.backgroundColor = p.level.color;
             clone.querySelector('.player-avatar').src = p.avatar;
-            clone.querySelector('.player-level').textContent = p.level.number;
-            clone.querySelector('.player-level').style.backgroundColor = p.level.color;
+
+            // MOSTRA LIVELLO (numero e nome)
+            const levelElement = clone.querySelector('.player-level');
+            levelElement.textContent = p.level.number;
+            levelElement.style.backgroundColor = p.level.color;
+            levelElement.title = `${p.level.name}`; // Tooltip con nome livello
+
             clone.querySelector('.player-name').textContent = p.name;
             clone.querySelector('.visits-count').textContent = p.total;
+
+            // AGGIUNGI NOME LIVELLO SOTTO IL NOME
+            const levelName = document.createElement('p');
+            levelName.className = 'player-level-name';
+            levelName.textContent = p.level.name;
+            levelName.style.color = p.level.color;
+            levelName.style.fontWeight = '600';
+            levelName.style.marginTop = '-10px';
+            levelName.style.marginBottom = '5px'; // Ridotto da 10px a 5px
+            levelName.style.fontSize = '0.9rem';
+            levelName.style.textTransform = 'uppercase';
+            levelName.style.letterSpacing = '0.5px';
+
+            clone.querySelector('.player-info').insertBefore(
+                levelName,
+                clone.querySelector('.player-stats')
+            );
+
+            // CALCOLA PROGRESSO VERSO LIVELLO SUCCESSIVO
+            // Trova il livello corrente nelle configurazioni
+            const currentLevelConfig = CONFIG.LEVELS.find(l =>
+                p.total >= l.min && p.total <= l.max
+            );
+
+            let progressPercent = 100;
+            let nextLevelName = '';
+            let visitsNeeded = 0;
+
+            if (currentLevelConfig) {
+                const currentLevelIndex = CONFIG.LEVELS.indexOf(currentLevelConfig);
+
+                // Se non è l'ultimo livello, calcola progresso verso il prossimo
+                if (currentLevelIndex < CONFIG.LEVELS.length - 1) {
+                    const nextLevelConfig = CONFIG.LEVELS[currentLevelIndex + 1];
+                    nextLevelName = nextLevelConfig.name;
+
+                    // Calcola percentuale di completamento del livello corrente
+                    const levelRange = currentLevelConfig.max - currentLevelConfig.min;
+                    if (levelRange > 0) {
+                        progressPercent = Math.min(
+                            ((p.total - currentLevelConfig.min) / levelRange) * 100,
+                            100
+                        );
+                    }
+
+                    // Calcola visite mancanti per livello successivo
+                    visitsNeeded = nextLevelConfig.min - p.total;
+                }
+            }
+
+            // AGGIUNGI BARRA DI PROGRESSO
+            const progressBar = document.createElement('div');
+            progressBar.className = 'level-progress';
+            progressBar.innerHTML = `
+            <div class="level-progress-fill" 
+                 style="width: ${progressPercent}%; 
+                        background-color: ${p.level.color};"></div>
+        `;
+
+            // Inserisci la barra di progresso
+            const playerInfo = clone.querySelector('.player-info');
+            const playerStats = clone.querySelector('.player-stats');
+            playerInfo.insertBefore(progressBar, playerStats);
+
+            // AGGIUNGI TESTO CON VISITE MANCANTI (solo se non è l'ultimo livello)
+            if (visitsNeeded > 0 && nextLevelName) {
+                const neededText = document.createElement('div');
+                neededText.className = 'level-need';
+                neededText.innerHTML = `
+                <span class="level-need-icon">📈</span>
+                <span class="level-need-text">${visitsNeeded} per ${nextLevelName}</span>
+            `;
+
+                // Inserisci dopo la barra di progresso
+                progressBar.insertAdjacentElement('afterend', neededText);
+            }
+
             grid.appendChild(clone);
         });
     }

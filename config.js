@@ -25,12 +25,12 @@ const CONFIG = {
 
     // Livelli
     LEVELS: [
-        { min: 0, max: 5, name: 'Principiante', color: '#808080' },
-        { min: 6, max: 15, name: 'Appassionato', color: '#4CAF50' },
-        { min: 16, max: 30, name: 'Esperto', color: '#2196F3' },
-        { min: 31, max: 50, name: 'Maestro', color: '#9C27B0' },
-        { min: 51, max: 100, name: 'Leggenda', color: '#FF9800' },
-        { min: 101, max: 999, name: 'McDio', color: '#FF0000' }
+        { min: 1, max: 3, name: '🍟 Novizio', color: '#808080' },
+        { min: 4, max: 10, name: '🍔 Amante', color: '#4CAF50' },
+        { min: 11, max: 20, name: '👑 Fanatico', color: '#2196F3' },
+        { min: 21, max: 30, name: '🏆 Professionista', color: '#9C27B0' },
+        { min: 31, max: 50, name: '💎 Mitico', color: '#FF9800' },
+        { min: 67, max: 365, name: 'GOAT', color: '#FF0000' }
     ],
 
     // Filtri di default
