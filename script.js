@@ -86,7 +86,7 @@ class McRankingJSONApp {
     }
 
     getAvatarUrl(name) {
-        const avatarMap = { 'Max': 'max.jpg', 'Easy': 'easy.jpg', 'Ale': 'ale.jpg', 'Kej': 'kej.jpg', 'Zani': 'zani.jpg', 'Marco': 'marco.jpg', 'Fabio': 'fabio.jpg' };
+        const avatarMap = { 'Max': 'max.jpg', 'Easy': 'easy.jpg', 'Ale': 'ale.jpg', 'Kej': 'kej.jpg', 'Zani': 'zani.jpg', 'Marco': 'marco.jpg', 'Fabio': 'fabio.jpg', 'Giova': 'giova.jpg' };
         return `${CONFIG.AVATARS_PATH}${avatarMap[name] || CONFIG.DEFAULT_AVATAR}`;
     }
 

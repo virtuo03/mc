@@ -353,7 +353,8 @@ function getAvatarUrl(playerName) {
         'Kej': 'kej.jpg',
         'Zani': 'zani.jpg',
         'Marco': 'marco.jpg',
-        'Fabio': 'fabio.jpg'
+        'Fabio': 'fabio.jpg',
+        'Giova': 'giova.jpg'
     };
 
     const fileName = avatarMap[playerName] || 'default.jpg';
