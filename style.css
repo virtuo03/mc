@@ -489,22 +489,6 @@ body {
     margin-top: 5px;
 }
 
-.player-badges {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    flex-wrap: wrap;
-}
-
-.badge {
-    background: var(--mc-blue);
-    color: white;
-    padding: 3px 8px;
-    border-radius: 10px;
-    font-size: 0.7rem;
-    font-weight: 500;
-}
-
 /* Simplified Statistics */
 .fun-stats {
     display: flex;

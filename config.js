@@ -13,16 +13,6 @@ const CONFIG = {
     // Costo medio per visita
     AVERAGE_COST_PER_VISIT: 10,
 
-    // Badge
-    BADGES: {
-        VETERAN: { name: 'Veterano', threshold: 30, color: '#FFD700' },
-        REGULAR: { name: 'Regolare', threshold: 15, color: '#C0C0C0' },
-        STREAKER: { name: 'In Serie', threshold: 3, color: '#FF6B6B' },
-        EARLY_BIRD: { name: 'Mattiniero', threshold: 10, color: '#4ECDC4' },
-        NIGHT_OWL: { name: 'Nottambulo', threshold: 10, color: '#45B7D1' },
-        CHAMPION: { name: 'Campione', threshold: 50, color: '#FF0000' }
-    },
-
     // Livelli
     LEVELS: [
         { min: 1, max: 3, name: '🍟 Novizio', color: '#808080' },
