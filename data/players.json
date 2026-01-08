@@ -1,6 +1,6 @@
 {
   "success": true,
-  "timestamp": "2026-01-08T19:02:40.684Z",
+  "timestamp": "2026-01-08T19:37:06.524Z",
   "data": {
     "visits": [
       {
@@ -19,7 +19,7 @@
         "Luogo": "mongi fuegooo",
         "note (panino e altro)": "corpo no organi norauto ameloassein",
         "Indirizzo email": "",
-        "Quanto sei ricco?": "11,20"
+        "Quanto sei ricco?": "11,60"
       },
       {
         "Informazioni cronologiche": "08/01/2026 12.42.20",
@@ -28,7 +28,7 @@
         "Luogo": "Mc",
         "note (panino e altro)": "caldo triplete",
         "Indirizzo email": "",
-        "Quanto sei ricco?": "11,20"
+        "Quanto sei ricco?": "11,60"
       },
       {
         "Informazioni cronologiche": "08/01/2026 12.43.59",
@@ -37,7 +37,7 @@
         "Luogo": "mc via mongi (casa max)",
         "note (panino e altro)": "i am Charlie Kirk ",
         "Indirizzo email": "",
-        "Quanto sei ricco?": ""
+        "Quanto sei ricco?": "8,90"
       },
       {
         "Informazioni cronologiche": "08/01/2026 12.44.44",
@@ -46,7 +46,7 @@
         "Luogo": "mc via mongi (casa Easy fix)",
         "note (panino e altro)": "odio il trio delle zecche",
         "Indirizzo email": "",
-        "Quanto sei ricco?": ""
+        "Quanto sei ricco?": "11,40"
       },
       {
         "Informazioni cronologiche": "08/01/2026 12.45.36",
@@ -55,7 +55,7 @@
         "Luogo": "Via Monginevro ",
         "note (panino e altro)": "Comple ale",
         "Indirizzo email": "",
-        "Quanto sei ricco?": ""
+        "Quanto sei ricco?": "7,99"
       },
       {
         "Informazioni cronologiche": "08/01/2026 12.56.47",
@@ -64,7 +64,7 @@
         "Luogo": "monginegro",
         "note (panino e altro)": "NHH",
         "Indirizzo email": "",
-        "Quanto sei ricco?": ""
+        "Quanto sei ricco?": "7,20"
       }
     ],
     "players": [
@@ -72,10 +72,10 @@
         "name": "Ale",
         "email": "",
         "total": 2,
-        "totalSpent": 11.2,
-        "averageSpend": 5.6,
-        "spendCount": 1,
-        "maxSpend": 11.2,
+        "totalSpent": 18.8,
+        "averageSpend": 9.4,
+        "spendCount": 2,
+        "maxSpend": 11.6,
         "level": {
           "number": 1,
           "name": "Principiante",
@@ -89,14 +89,14 @@
           {
             "date": "07/01/2026",
             "location": "mongi fuegooo",
-            "spend": 11.2,
+            "spend": 11.6,
             "note": "corpo no organi norauto ameloassein",
             "timestamp": "08/01/2026 12.17.36"
           },
           {
             "date": "01/01/2026",
             "location": "monginegro",
-            "spend": 0,
+            "spend": 7.2,
             "note": "NHH",
             "timestamp": "08/01/2026 12.56.47"
           }
@@ -111,10 +111,10 @@
         "name": "Kej",
         "email": "",
         "total": 2,
-        "totalSpent": 0,
-        "averageSpend": 0,
-        "spendCount": 0,
-        "maxSpend": 0,
+        "totalSpent": 20.3,
+        "averageSpend": 10.15,
+        "spendCount": 2,
+        "maxSpend": 11.4,
         "level": {
           "number": 1,
           "name": "Principiante",
@@ -128,14 +128,14 @@
           {
             "date": "07/01/2026",
             "location": "mc via mongi (casa Easy fix)",
-            "spend": 0,
+            "spend": 11.4,
             "note": "odio il trio delle zecche",
             "timestamp": "08/01/2026 12.44.44"
           },
           {
             "date": "02/01/2026",
             "location": "mc via mongi (casa max)",
-            "spend": 0,
+            "spend": 8.9,
             "note": "i am Charlie Kirk",
             "timestamp": "08/01/2026 12.43.59"
           }
@@ -180,10 +180,10 @@
         "name": "Easy",
         "email": "",
         "total": 1,
-        "totalSpent": 11.2,
-        "averageSpend": 11.2,
+        "totalSpent": 11.6,
+        "averageSpend": 11.6,
         "spendCount": 1,
-        "maxSpend": 11.2,
+        "maxSpend": 11.6,
         "level": {
           "number": 1,
           "name": "Principiante",
@@ -196,7 +196,7 @@
           {
             "date": "07/01/2026",
             "location": "Mc",
-            "spend": 11.2,
+            "spend": 11.6,
             "note": "caldo triplete",
             "timestamp": "08/01/2026 12.42.20"
           }
@@ -210,10 +210,10 @@
         "name": "Zani",
         "email": "",
         "total": 1,
-        "totalSpent": 0,
-        "averageSpend": 0,
-        "spendCount": 0,
-        "maxSpend": 0,
+        "totalSpent": 7.99,
+        "averageSpend": 7.99,
+        "spendCount": 1,
+        "maxSpend": 7.99,
         "level": {
           "number": 1,
           "name": "Principiante",
@@ -226,7 +226,7 @@
           {
             "date": "07/01/2026",
             "location": "Via Monginevro ",
-            "spend": 0,
+            "spend": 7.99,
             "note": "Comple ale",
             "timestamp": "08/01/2026 12.45.36"
           }
@@ -240,16 +240,16 @@
     "stats": {
       "totalVisits": 7,
       "totalPlayers": 5,
-      "totalSpent": 22.4,
-      "averageTotalSpent": 4.48,
+      "totalSpent": 58.69,
+      "averageTotalSpent": 11.74,
       "topPlayer": "Ale",
-      "topSpender": "Ale",
-      "topSpenderAmount": 11.2,
+      "topSpender": "Kej",
+      "topSpenderAmount": 20.3,
       "topAverageSpender": "Easy",
-      "topAverageSpend": 11.2,
+      "topAverageSpend": 11.6,
       "playersWithEmail": 1,
-      "visitsWithSpend": 2,
-      "lastUpdate": "2026-01-08T19:02:40.684Z"
+      "visitsWithSpend": 6,
+      "lastUpdate": "2026-01-08T19:37:06.523Z"
     }
   }
 }
