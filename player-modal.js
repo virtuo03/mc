@@ -41,8 +41,16 @@ class PlayerModal {
                             <div class="modal-stat-label">Visite Totali</div>
                         </div>
                         <div class="modal-stat">
-                            <div class="modal-stat-value" id="modal-avg-monthly">0</div>
-                            <div class="modal-stat-label">Media Mensile</div>
+                            <div class="modal-stat-value" id="modal-total-spent">€0</div>
+                            <div class="modal-stat-label">Spesa Totale</div>
+                        </div>
+                        <div class="modal-stat">
+                            <div class="modal-stat-value" id="modal-avg-spent">€0</div>
+                            <div class="modal-stat-label">Spesa Media</div>
+                        </div>
+                        <div class="modal-stat">
+                            <div class="modal-stat-value" id="modal-max-spent">€0</div>
+                            <div class="modal-stat-label">Record Spesa</div>
                         </div>
                     </div>
                     
@@ -52,7 +60,7 @@ class PlayerModal {
                     </div>
                     
                     <div class="modal-section">
-                        <h3><i class="fas fa-history"></i> Ultime Visite</h3>
+                        <h3><i class="fas fa-history"></i> Ultime Visite con Spesa</h3>
                         <div class="modal-visits-list" id="modal-visits-list"></div>
                     </div>
                 </div>
@@ -124,7 +132,7 @@ class PlayerModal {
         const playerIndex = this.app.players.findIndex(p => p.name === player.name);
         this.modal.querySelector('.modal-player-rank').textContent = `#${playerIndex + 1} in classifica`;
         
-        // Statistiche
+        // Statistiche (ora includendo spese)
         const playerVisits = this.app.allVisits.filter(v => v.Nome === player.name);
         this.calculateAndDisplayStats(player, playerVisits);
     }
@@ -133,20 +141,53 @@ class PlayerModal {
         // Statistiche di base
         document.getElementById('modal-total-visits').textContent = player.total;
         
-        // Media mensile
-        const firstVisit = this.getFirstVisit(playerVisits);
-        const monthsDiff = this.monthDifference(firstVisit, new Date());
-        const avgMonthly = monthsDiff > 0 ? (player.total / monthsDiff).toFixed(1) : player.total;
-        document.getElementById('modal-avg-monthly').textContent = avgMonthly;
+        // Statistiche di spesa
+        const totalSpent = this.calculateTotalSpent(playerVisits);
+        const avgSpent = player.total > 0 ? (totalSpent / player.total) : 0;
+        const maxSpent = this.calculateMaxSpent(playerVisits);
+        
+        document.getElementById('modal-total-spent').textContent = `€${totalSpent.toFixed(2)}`;
+        document.getElementById('modal-avg-spent').textContent = `€${avgSpent.toFixed(2)}`;
+        document.getElementById('modal-max-spent').textContent = `€${maxSpent.toFixed(2)}`;
         
         // Luoghi frequenti
         this.displayFrequentLocations(playerVisits);
         
-        // Ultime visite
-        this.displayRecentVisits(playerVisits);
+        // Ultime visite CON SPESA
+        this.displayRecentVisitsWithSpend(playerVisits);
         
         // Progresso verso livello successivo
         this.displayLevelProgress(player);
+    }
+
+    calculateTotalSpent(playerVisits) {
+        let total = 0;
+        playerVisits.forEach(visit => {
+            const spendField = visit['Quanto sei ricco?'] || '';
+            if (spendField) {
+                const cleanAmount = String(spendField)
+                    .replace(/[^\d,.-]/g, '')
+                    .replace(/,/g, '.');
+                const amount = parseFloat(cleanAmount) || 0;
+                total += amount;
+            }
+        });
+        return Math.round(total * 100) / 100; // Arrotonda a 2 decimali
+    }
+
+    calculateMaxSpent(playerVisits) {
+        let max = 0;
+        playerVisits.forEach(visit => {
+            const spendField = visit['Quanto sei ricco?'] || '';
+            if (spendField) {
+                const cleanAmount = String(spendField)
+                    .replace(/[^\d,.-]/g, '')
+                    .replace(/,/g, '.');
+                const amount = parseFloat(cleanAmount) || 0;
+                if (amount > max) max = amount;
+            }
+        });
+        return Math.round(max * 100) / 100;
     }
 
     displayFrequentLocations(playerVisits) {
@@ -181,29 +222,56 @@ class PlayerModal {
         });
     }
 
-    displayRecentVisits(playerVisits) {
+    displayRecentVisitsWithSpend(playerVisits) {
         const visitsContainer = document.getElementById('modal-visits-list');
         visitsContainer.innerHTML = '';
         
+        // Filtra solo visite con spesa > 0
+        const visitsWithSpend = playerVisits.filter(visit => {
+            const spendField = visit['Quanto sei ricco?'] || '';
+            if (spendField) {
+                const cleanAmount = String(spendField)
+                    .replace(/[^\d,.-]/g, '')
+                    .replace(/,/g, '.');
+                return parseFloat(cleanAmount) > 0;
+            }
+            return false;
+        });
+        
         // Ordina per data (più recenti prima)
-        const recentVisits = [...playerVisits]
+        const recentVisits = [...visitsWithSpend]
             .sort((a, b) => {
                 const dateA = this.parseDate(a.data);
                 const dateB = this.parseDate(b.data);
                 return dateB - dateA;
             })
-            .slice(0, 10); // Ultime 10 visite
+            .slice(0, 8); // Ultime 8 visite con spesa
         
         if (recentVisits.length === 0) {
-            visitsContainer.innerHTML = '<p class="no-data">Nessuna visita registrata</p>';
+            visitsContainer.innerHTML = '<p class="no-data">Nessuna spesa registrata</p>';
             return;
         }
         
         recentVisits.forEach(visit => {
+            const spendField = visit['Quanto sei ricco?'] || '';
+            const cleanAmount = String(spendField)
+                .replace(/[^\d,.-]/g, '')
+                .replace(/,/g, '.');
+            const amount = parseFloat(cleanAmount) || 0;
+            
             const visitElement = document.createElement('div');
             visitElement.className = 'modal-visit-item';
+            
+            // Colore diverso in base all'importo
+            let amountClass = 'amount-low';
+            if (amount >= 20) amountClass = 'amount-high';
+            else if (amount >= 10) amountClass = 'amount-medium';
+            
             visitElement.innerHTML = `
-                <div class="modal-visit-date">${visit.data}</div>
+                <div class="modal-visit-header">
+                    <span class="modal-visit-date">${visit.data}</span>
+                    <span class="modal-visit-amount ${amountClass}">€${amount.toFixed(2)}</span>
+                </div>
                 <div class="modal-visit-location">${visit.Luogo || 'Sconosciuto'}</div>
                 ${visit.note ? `<div class="modal-visit-note">"${visit.note}"</div>` : ''}
             `;
@@ -242,25 +310,10 @@ class PlayerModal {
     }
 
     // Utility functions
-    getFirstVisit(playerVisits) {
-        if (playerVisits.length === 0) return new Date();
-        
-        const dates = playerVisits
-            .map(v => this.parseDate(v.data))
-            .filter(date => !isNaN(date.getTime()));
-        
-        return dates.length > 0 ? new Date(Math.min(...dates)) : new Date();
-    }
-
     parseDate(dateString) {
         if (!dateString) return new Date();
         const [day, month, year] = dateString.split('/');
         return new Date(year, month - 1, day);
-    }
-
-    monthDifference(date1, date2) {
-        const months = (date2.getFullYear() - date1.getFullYear()) * 12;
-        return months + date2.getMonth() - date1.getMonth() + 1; // +1 per evitare 0
     }
 
     getContrastColor(hexColor) {
@@ -277,7 +330,7 @@ class PlayerModal {
     }
 }
 
-// Stili CSS per il modal (versione semplificata)
+// Stili CSS per il modal con spese
 const modalStyles = `
 .player-modal {
     position: fixed;
@@ -312,7 +365,7 @@ const modalStyles = `
     left: 50%;
     transform: translate(-50%, -50%) scale(0.9);
     width: 90%;
-    max-width: 700px;
+    max-width: 800px;
     max-height: 90vh;
     background: white;
     border-radius: 20px;
@@ -413,8 +466,8 @@ const modalStyles = `
 
 .modal-stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
     margin-bottom: 30px;
 }
 
@@ -432,10 +485,26 @@ const modalStyles = `
 }
 
 .modal-stat-value {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
-    color: var(--mc-red);
     margin-bottom: 5px;
+}
+
+/* Colori diversi per le statistiche di spesa */
+#modal-total-visits {
+    color: var(--mc-red);
+}
+
+#modal-total-spent {
+    color: #FF5722;
+}
+
+#modal-avg-spent {
+    color: #4CAF50;
+}
+
+#modal-max-spent {
+    color: #9C27B0;
 }
 
 .modal-stat-label {
@@ -522,11 +591,41 @@ const modalStyles = `
     transform: translateX(5px);
 }
 
+.modal-visit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
 .modal-visit-date {
     font-weight: 600;
     color: var(--mc-red);
-    margin-bottom: 5px;
     font-size: 0.9rem;
+}
+
+.modal-visit-amount {
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.amount-low {
+    color: #4CAF50;
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.amount-medium {
+    color: #FF9800;
+    background: rgba(255, 152, 0, 0.1);
+}
+
+.amount-high {
+    color: #F44336;
+    background: rgba(244, 67, 54, 0.1);
 }
 
 .modal-visit-location {
@@ -540,6 +639,8 @@ const modalStyles = `
     font-size: 0.85rem;
     font-style: italic;
     margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px dashed #ddd;
 }
 
 .player-modal-footer {
@@ -585,6 +686,9 @@ const modalStyles = `
     color: #999;
     font-style: italic;
     padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border: 2px dashed #ddd;
 }
 
 /* Responsive */
@@ -605,7 +709,7 @@ const modalStyles = `
     }
     
     .modal-stats-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .player-modal-body {
@@ -614,17 +718,32 @@ const modalStyles = `
     }
     
     .modal-stat-value {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }
 
 @media (max-width: 480px) {
+    .modal-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .modal-player-name {
         font-size: 1.8rem;
     }
     
     .player-modal-content {
         width: 95%;
+        max-width: 95%;
+    }
+    
+    .modal-visit-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .modal-visit-amount {
+        align-self: flex-start;
     }
 }
 `;

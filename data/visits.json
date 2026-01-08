@@ -1,51 +1,65 @@
 [
- {
-   "Informazioni cronologiche": "08/01/2026 11.51.35",
-   "Nome": "Fabio",
-   "data": "07/01/2026",
-   "Luogo": "monginevro",
-   "note": "non ho manco magiato"
- },
- {
-   "Informazioni cronologiche": "08/01/2026 12.17.36",
-   "Nome": "Ale",
-   "data": "07/01/2026",
-   "Luogo": "mongi fuegooo",
-   "note": "corpo no organi norauto ameloassein"
- },
- {
-   "Informazioni cronologiche": "08/01/2026 12.42.20",
-   "Nome": "Easy",
-   "data": "07/01/2026",
-   "Luogo": "Mc",
-   "note": "caldo triplete"
- },
- {
-   "Informazioni cronologiche": "08/01/2026 12.43.59",
-   "Nome": "Kej",
-   "data": "02/01/2026",
-   "Luogo": "mc via mongi (casa max)",
-   "note": "i am Charlie Kirk "
- },
- {
-   "Informazioni cronologiche": "08/01/2026 12.44.44",
-   "Nome": "Kej",
-   "data": "07/01/2026",
-   "Luogo": "mc via mongi (casa Easy fix)",
-   "note": "odio il trio delle zecche"
- },
- {
-   "Informazioni cronologiche": "08/01/2026 12.45.36",
-   "Nome": "Zani",
-   "data": "07/01/2026",
-   "Luogo": "Via Monginevro ",
-   "note": "Comple sale"
- },
- {
-   "Informazioni cronologiche": "08/01/2026 12.56.47",
-   "Nome": "Ale",
-   "data": "01/01/2026",
-   "Luogo": "monginegro",
-   "note": "NHH"
- }
+  {
+    "Informazioni cronologiche": "08/01/2026 11.51.35",
+    "Nome": "Fabio",
+    "data": "07/01/2026",
+    "Luogo": "monginevro",
+    "note (panino e altro)": "non ho manco magiato",
+    "Indirizzo email": "fabiorovituso@gmail.com",
+    "Quanto sei ricco?": "0,00"
+  },
+  {
+    "Informazioni cronologiche": "08/01/2026 12.17.36",
+    "Nome": "Ale",
+    "data": "07/01/2026",
+    "Luogo": "mongi fuegooo",
+    "note (panino e altro)": "corpo no organi norauto ameloassein",
+    "Indirizzo email": "",
+    "Quanto sei ricco?": "11,20"
+  },
+  {
+    "Informazioni cronologiche": "08/01/2026 12.42.20",
+    "Nome": "Easy",
+    "data": "07/01/2026",
+    "Luogo": "Mc",
+    "note (panino e altro)": "caldo triplete",
+    "Indirizzo email": "",
+    "Quanto sei ricco?": "11,20"
+  },
+  {
+    "Informazioni cronologiche": "08/01/2026 12.43.59",
+    "Nome": "Kej",
+    "data": "02/01/2026",
+    "Luogo": "mc via mongi (casa max)",
+    "note (panino e altro)": "i am Charlie Kirk ",
+    "Indirizzo email": "",
+    "Quanto sei ricco?": ""
+  },
+  {
+    "Informazioni cronologiche": "08/01/2026 12.44.44",
+    "Nome": "Kej",
+    "data": "07/01/2026",
+    "Luogo": "mc via mongi (casa Easy fix)",
+    "note (panino e altro)": "odio il trio delle zecche",
+    "Indirizzo email": "",
+    "Quanto sei ricco?": ""
+  },
+  {
+    "Informazioni cronologiche": "08/01/2026 12.45.36",
+    "Nome": "Zani",
+    "data": "07/01/2026",
+    "Luogo": "Via Monginevro ",
+    "note (panino e altro)": "Comple ale",
+    "Indirizzo email": "",
+    "Quanto sei ricco?": ""
+  },
+  {
+    "Informazioni cronologiche": "08/01/2026 12.56.47",
+    "Nome": "Ale",
+    "data": "01/01/2026",
+    "Luogo": "monginegro",
+    "note (panino e altro)": "NHH",
+    "Indirizzo email": "",
+    "Quanto sei ricco?": ""
+  }
 ]

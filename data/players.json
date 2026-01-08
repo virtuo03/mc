@@ -1,6 +1,6 @@
 {
   "success": true,
-  "timestamp": "2026-01-08T18:07:19.916Z",
+  "timestamp": "2026-01-08T19:02:40.684Z",
   "data": {
     "visits": [
       {
@@ -8,49 +8,63 @@
         "Nome": "Fabio",
         "data": "07/01/2026",
         "Luogo": "monginevro",
-        "note": "non ho manco magiato"
+        "note (panino e altro)": "non ho manco magiato",
+        "Indirizzo email": "fabiorovituso@gmail.com",
+        "Quanto sei ricco?": "0,00"
       },
       {
         "Informazioni cronologiche": "08/01/2026 12.17.36",
         "Nome": "Ale",
         "data": "07/01/2026",
         "Luogo": "mongi fuegooo",
-        "note": "corpo no organi norauto ameloassein"
+        "note (panino e altro)": "corpo no organi norauto ameloassein",
+        "Indirizzo email": "",
+        "Quanto sei ricco?": "11,20"
       },
       {
         "Informazioni cronologiche": "08/01/2026 12.42.20",
         "Nome": "Easy",
         "data": "07/01/2026",
         "Luogo": "Mc",
-        "note": "caldo triplete"
+        "note (panino e altro)": "caldo triplete",
+        "Indirizzo email": "",
+        "Quanto sei ricco?": "11,20"
       },
       {
         "Informazioni cronologiche": "08/01/2026 12.43.59",
         "Nome": "Kej",
         "data": "02/01/2026",
         "Luogo": "mc via mongi (casa max)",
-        "note": "i am Charlie Kirk "
+        "note (panino e altro)": "i am Charlie Kirk ",
+        "Indirizzo email": "",
+        "Quanto sei ricco?": ""
       },
       {
         "Informazioni cronologiche": "08/01/2026 12.44.44",
         "Nome": "Kej",
         "data": "07/01/2026",
         "Luogo": "mc via mongi (casa Easy fix)",
-        "note": "odio il trio delle zecche"
+        "note (panino e altro)": "odio il trio delle zecche",
+        "Indirizzo email": "",
+        "Quanto sei ricco?": ""
       },
       {
         "Informazioni cronologiche": "08/01/2026 12.45.36",
         "Nome": "Zani",
         "data": "07/01/2026",
         "Luogo": "Via Monginevro ",
-        "note": "Comple sale"
+        "note (panino e altro)": "Comple ale",
+        "Indirizzo email": "",
+        "Quanto sei ricco?": ""
       },
       {
         "Informazioni cronologiche": "08/01/2026 12.56.47",
         "Nome": "Ale",
         "data": "01/01/2026",
         "Luogo": "monginegro",
-        "note": "NHH"
+        "note (panino e altro)": "NHH",
+        "Indirizzo email": "",
+        "Quanto sei ricco?": ""
       }
     ],
     "players": [
@@ -58,6 +72,10 @@
         "name": "Ale",
         "email": "",
         "total": 2,
+        "totalSpent": 11.2,
+        "averageSpend": 5.6,
+        "spendCount": 1,
+        "maxSpend": 11.2,
         "level": {
           "number": 1,
           "name": "Principiante",
@@ -67,12 +85,36 @@
           "mongi fuegooo",
           "monginegro"
         ],
+        "recentVisits": [
+          {
+            "date": "07/01/2026",
+            "location": "mongi fuegooo",
+            "spend": 11.2,
+            "note": "corpo no organi norauto ameloassein",
+            "timestamp": "08/01/2026 12.17.36"
+          },
+          {
+            "date": "01/01/2026",
+            "location": "monginegro",
+            "spend": 0,
+            "note": "NHH",
+            "timestamp": "08/01/2026 12.56.47"
+          }
+        ],
+        "notes": [
+          "corpo no organi norauto ameloassein",
+          "NHH"
+        ],
         "avatar": "assets/avatars/ale.jpg"
       },
       {
         "name": "Kej",
         "email": "",
         "total": 2,
+        "totalSpent": 0,
+        "averageSpend": 0,
+        "spendCount": 0,
+        "maxSpend": 0,
         "level": {
           "number": 1,
           "name": "Principiante",
@@ -82,12 +124,36 @@
           "mc via mongi (casa max)",
           "mc via mongi (casa Easy fix)"
         ],
+        "recentVisits": [
+          {
+            "date": "07/01/2026",
+            "location": "mc via mongi (casa Easy fix)",
+            "spend": 0,
+            "note": "odio il trio delle zecche",
+            "timestamp": "08/01/2026 12.44.44"
+          },
+          {
+            "date": "02/01/2026",
+            "location": "mc via mongi (casa max)",
+            "spend": 0,
+            "note": "i am Charlie Kirk",
+            "timestamp": "08/01/2026 12.43.59"
+          }
+        ],
+        "notes": [
+          "i am Charlie Kirk",
+          "odio il trio delle zecche"
+        ],
         "avatar": "assets/avatars/kej.jpg"
       },
       {
         "name": "Fabio",
-        "email": "",
+        "email": "fabiorovituso@gmail.com",
         "total": 1,
+        "totalSpent": 0,
+        "averageSpend": 0,
+        "spendCount": 0,
+        "maxSpend": 0,
         "level": {
           "number": 1,
           "name": "Principiante",
@@ -96,12 +162,28 @@
         "topLocations": [
           "monginevro"
         ],
+        "recentVisits": [
+          {
+            "date": "07/01/2026",
+            "location": "monginevro",
+            "spend": 0,
+            "note": "non ho manco magiato",
+            "timestamp": "08/01/2026 11.51.35"
+          }
+        ],
+        "notes": [
+          "non ho manco magiato"
+        ],
         "avatar": "assets/avatars/fabio.jpg"
       },
       {
         "name": "Easy",
         "email": "",
         "total": 1,
+        "totalSpent": 11.2,
+        "averageSpend": 11.2,
+        "spendCount": 1,
+        "maxSpend": 11.2,
         "level": {
           "number": 1,
           "name": "Principiante",
@@ -110,12 +192,28 @@
         "topLocations": [
           "Mc"
         ],
+        "recentVisits": [
+          {
+            "date": "07/01/2026",
+            "location": "Mc",
+            "spend": 11.2,
+            "note": "caldo triplete",
+            "timestamp": "08/01/2026 12.42.20"
+          }
+        ],
+        "notes": [
+          "caldo triplete"
+        ],
         "avatar": "assets/avatars/easy.jpg"
       },
       {
         "name": "Zani",
         "email": "",
         "total": 1,
+        "totalSpent": 0,
+        "averageSpend": 0,
+        "spendCount": 0,
+        "maxSpend": 0,
         "level": {
           "number": 1,
           "name": "Principiante",
@@ -124,15 +222,34 @@
         "topLocations": [
           "Via Monginevro"
         ],
+        "recentVisits": [
+          {
+            "date": "07/01/2026",
+            "location": "Via Monginevro ",
+            "spend": 0,
+            "note": "Comple ale",
+            "timestamp": "08/01/2026 12.45.36"
+          }
+        ],
+        "notes": [
+          "Comple ale"
+        ],
         "avatar": "assets/avatars/zani.jpg"
       }
     ],
     "stats": {
       "totalVisits": 7,
       "totalPlayers": 5,
+      "totalSpent": 22.4,
+      "averageTotalSpent": 4.48,
       "topPlayer": "Ale",
-      "playersWithEmail": 0,
-      "lastUpdate": "2026-01-08T18:07:19.915Z"
+      "topSpender": "Ale",
+      "topSpenderAmount": 11.2,
+      "topAverageSpender": "Easy",
+      "topAverageSpend": 11.2,
+      "playersWithEmail": 1,
+      "visitsWithSpend": 2,
+      "lastUpdate": "2026-01-08T19:02:40.684Z"
     }
   }
 }
