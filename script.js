@@ -4,6 +4,7 @@ class McRankingJSONApp {
         this.filteredVisits = [];
         this.players = [];
         this.stats = {};
+        this.playerModal = null;
         this.init();
     }
 
@@ -12,6 +13,7 @@ class McRankingJSONApp {
             await this.loadData();
             this.applyFilter('all'); // Filtro iniziale
             this.setupEventListeners();
+            this.playerModal = new PlayerModal(this);
         } catch (error) {
             console.error('Errore:', error);
             this.showError('Errore nel caricamento dati.');
@@ -98,6 +100,9 @@ class McRankingJSONApp {
         this.renderPlayerCards();
         this.renderRecentVisits();
         this.updateFunStats(); // Assicurati che questa riga sia presente
+
+        // Aggiungi event listener alle card dopo il render
+        this.setupPlayerCardClick();
     }
 
     updateFunStats() {
@@ -243,6 +248,28 @@ class McRankingJSONApp {
         });
     }
 
+    // Aggiungi questo metodo
+    setupPlayerCardClick() {
+        const playerCards = document.querySelectorAll('.player-card');
+
+        playerCards.forEach((card, index) => {
+            // Rimuovi eventuali listener precedenti
+            card.removeEventListener('click', card.clickHandler);
+
+            // Crea un nuovo handler
+            card.clickHandler = () => {
+                const player = this.players[index];
+                if (player && this.playerModal) {
+                    this.playerModal.open(player);
+                }
+            };
+
+            // Aggiungi l'event listener
+            card.addEventListener('click', card.clickHandler);
+            card.style.cursor = 'pointer';
+        });
+    }
+
     renderRecentVisits() {
         const list = document.getElementById('visits-list');
         const template = document.getElementById('visit-item-template');
@@ -270,6 +297,14 @@ class McRankingJSONApp {
             this.applyFilter(e.target.value);
         });
     }
+
+    // Metodo per mostrare errori (se necessario)
+    showError(message) {
+        console.error(message);
+        // Puoi implementare una UI per mostrare errori
+    }
 }
 
-document.addEventListener('DOMContentLoaded', () => { new McRankingJSONApp(); });
+document.addEventListener('DOMContentLoaded', () => {
+    new McRankingJSONApp();
+});
