@@ -98,43 +98,13 @@ function processData() {
         }
 
         // Calcola statistiche per ogni giocatore
+        // Calcola statistiche per ogni giocatore (Versione Semplificata)
         const players = Array.from(playerMap.values()).map(player => {
-            console.log(`Elaboro ${player.name}: ${player.total} visite`);
-
-            // Calcola streak
-            const streak = calculateStreak(player.dates);
-
-            // Calcola livello
-            const level = calculateLevel(player.total);
-
-            // Badge
-            const badges = calculateBadges(player);
-
-            // Date formattate
-            const sortedDates = [...new Set(player.dates)]
-                .filter(date => date)
-                .sort();
-
-            const firstVisit = sortedDates[0] || null;
-            const lastVisit = sortedDates[sortedDates.length - 1] || null;
-
-            // Luoghi più frequenti
-            const topLocations = Array.from(player.locations)
-                .filter(loc => loc && loc.trim())
-                .slice(0, 3);
-
             return {
                 name: player.name,
                 total: player.total,
-                streak,
-                level,
-                firstVisit,
-                lastVisit,
-                topLocations,
-                locationsCount: player.locations.size,
-                notesCount: player.notes.filter(note => note && note.trim()).length,
-                monthlyAverage: calculateMonthlyAverage(player.dates),
-                favoriteTime: calculateFavoriteTime(player.times),
+                level: calculateLevel(player.total),
+                topLocations: Array.from(player.locations).slice(0, 3),
                 avatar: getAvatarUrl(player.name)
             };
         });
