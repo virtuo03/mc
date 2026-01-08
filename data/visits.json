@@ -1,37 +1,23 @@
 [
   {
-    "Nome": "Mario",
+    "Nome": "Mario Rossi",
     "Data": "2024-01-15",
     "Orario": "12:30",
     "Luogo": "McDrive Roma",
     "Note": "Big Mac Menu"
   },
   {
-    "Nome": "Luigi",
+    "Nome": "Luigi Bianchi",
     "Data": "2024-01-14",
     "Orario": "19:45",
     "Luogo": "McDonald's Milano",
     "Note": "Con amici"
   },
   {
-    "Nome": "Paolo",
+    "Nome": "Paolo Verdi",
     "Data": "2024-01-13",
     "Orario": "08:15",
     "Luogo": "McDonald's Napoli",
     "Note": "Colazione"
-  },
-  {
-    "Nome": "Giulia",
-    "Data": "2024-01-12",
-    "Orario": "13:00",
-    "Luogo": "McDrive Torino",
-    "Note": "Pranzo veloce"
-  },
-  {
-    "Nome": "Anna",
-    "Data": "2024-01-11",
-    "Orario": "21:30",
-    "Luogo": "McDonald's Firenze",
-    "Note": "Dopo cinema"
   }
 ]
