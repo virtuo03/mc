@@ -22,5 +22,5 @@ Un sito web per tenere traccia delle visite al McDonald's tra amici, con classif
 
 ### 1. Clona il repository
 ```bash
-git clone https://github.com/tuo-username/mc-ranking.git
-cd mc-ranking
+git clone https://github.com/tuo-username/mc.git
+cd mc
