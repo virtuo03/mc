@@ -102,14 +102,26 @@ class McRankingJSONApp {
 
     updateFunStats() {
         const kingNameDisplay = document.getElementById('king-name');
+        const gymKingDisplay = document.getElementById('gym-king-name'); // Nuovo elemento
+
         if (!kingNameDisplay) return;
 
-        // Il re è il primo giocatore nell'array 'players' perché è già ordinato per 'total' decrescente
+        // Il re del Mc è il primo giocatore (più visite)
         if (this.players.length > 0) {
             const king = this.players[0];
             kingNameDisplay.textContent = `${king.name} (${king.total} visite)`;
         } else {
             kingNameDisplay.textContent = "Nessuno";
+        }
+
+        // Il re della Gym è l'ultimo giocatore (meno visite)
+        if (this.players.length > 1) {
+            const gymKing = this.players[this.players.length - 1];
+            if (gymKingDisplay) {
+                gymKingDisplay.textContent = `${gymKing.name} (${gymKing.total} visite)`;
+            }
+        } else if (gymKingDisplay) {
+            gymKingDisplay.textContent = "Nessuno";
         }
     }
 

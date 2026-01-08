@@ -1,6 +1,6 @@
 {
   "success": true,
-  "timestamp": "2026-01-08T11:59:20.009Z",
+  "timestamp": "2026-01-08T18:07:19.916Z",
   "data": {
     "visits": [
       {
@@ -56,123 +56,83 @@
     "players": [
       {
         "name": "Ale",
+        "email": "",
         "total": 2,
-        "streak": 1,
         "level": {
           "number": 1,
           "name": "Principiante",
-          "color": "#808080",
-          "min": 0,
-          "max": 5
+          "color": "#808080"
         },
-        "firstVisit": "2026-01-01",
-        "lastVisit": "2026-01-07",
         "topLocations": [
           "mongi fuegooo",
           "monginegro"
         ],
-        "locationsCount": 2,
-        "notesCount": 2,
-        "monthlyAverage": "2.0",
-        "favoriteTime": "Pranzo",
         "avatar": "assets/avatars/ale.jpg"
       },
       {
         "name": "Kej",
+        "email": "",
         "total": 2,
-        "streak": 1,
         "level": {
           "number": 1,
           "name": "Principiante",
-          "color": "#808080",
-          "min": 0,
-          "max": 5
+          "color": "#808080"
         },
-        "firstVisit": "2026-01-02",
-        "lastVisit": "2026-01-07",
         "topLocations": [
           "mc via mongi (casa max)",
           "mc via mongi (casa Easy fix)"
         ],
-        "locationsCount": 2,
-        "notesCount": 2,
-        "monthlyAverage": "2.0",
-        "favoriteTime": "Pranzo",
         "avatar": "assets/avatars/kej.jpg"
       },
       {
         "name": "Fabio",
+        "email": "",
         "total": 1,
-        "streak": 1,
         "level": {
           "number": 1,
           "name": "Principiante",
-          "color": "#808080",
-          "min": 0,
-          "max": 5
+          "color": "#808080"
         },
-        "firstVisit": "2026-01-07",
-        "lastVisit": "2026-01-07",
         "topLocations": [
           "monginevro"
         ],
-        "locationsCount": 1,
-        "notesCount": 1,
-        "monthlyAverage": 0,
-        "favoriteTime": "Mattina",
         "avatar": "assets/avatars/fabio.jpg"
       },
       {
         "name": "Easy",
+        "email": "",
         "total": 1,
-        "streak": 1,
         "level": {
           "number": 1,
           "name": "Principiante",
-          "color": "#808080",
-          "min": 0,
-          "max": 5
+          "color": "#808080"
         },
-        "firstVisit": "2026-01-07",
-        "lastVisit": "2026-01-07",
         "topLocations": [
           "Mc"
         ],
-        "locationsCount": 1,
-        "notesCount": 1,
-        "monthlyAverage": 0,
-        "favoriteTime": "Pranzo",
         "avatar": "assets/avatars/easy.jpg"
       },
       {
         "name": "Zani",
+        "email": "",
         "total": 1,
-        "streak": 1,
         "level": {
           "number": 1,
           "name": "Principiante",
-          "color": "#808080",
-          "min": 0,
-          "max": 5
+          "color": "#808080"
         },
-        "firstVisit": "2026-01-07",
-        "lastVisit": "2026-01-07",
         "topLocations": [
           "Via Monginevro"
         ],
-        "locationsCount": 1,
-        "notesCount": 1,
-        "monthlyAverage": 0,
-        "favoriteTime": "Pranzo",
         "avatar": "assets/avatars/zani.jpg"
       }
     ],
     "stats": {
       "totalVisits": 7,
       "totalPlayers": 5,
-      "startDate": "2026-01-01",
       "topPlayer": "Ale",
-      "lastUpdate": "2026-01-08T11:59:20.008Z"
+      "playersWithEmail": 0,
+      "lastUpdate": "2026-01-08T18:07:19.915Z"
     }
   }
 }

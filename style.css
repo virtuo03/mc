@@ -430,6 +430,16 @@ body {
     border: 3px solid var(--mc-yellow);
 }
 
+/* Aggiungi uno stile specifico per il Re della Gym */
+.fun-stat-card:nth-child(2) {
+    border-color: var(--mc-blue);
+    /* Colore diverso per differenziare */
+}
+
+.fun-stat-card:nth-child(2) i {
+    color: var(--mc-blue);
+}
+
 .fun-stat-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
@@ -452,6 +462,11 @@ body {
     font-weight: 700;
     color: var(--mc-red);
     margin: 0;
+}
+
+/* Stile specifico per il testo del Re della Gym */
+.fun-stat-card:nth-child(2) p {
+    color: var(--mc-blue);
 }
 
 /* Visits List */
