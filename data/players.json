@@ -1,6 +1,6 @@
 {
   "success": true,
-  "timestamp": "2026-01-08T11:19:39.580Z",
+  "timestamp": "2026-01-08T11:44:23.799Z",
   "data": {
     "visits": [
       {
@@ -13,9 +13,23 @@
       {
         "Informazioni cronologiche": "08/01/2026 12.17.36",
         "Nome": "Ale",
-        "data": "01/01/2026",
+        "data": "07/01/2026",
         "Luogo": "mongi fuegooo",
         "note": "corpo no organi norauto ameloassein"
+      },
+      {
+        "Informazioni cronologiche": "08/01/2026 12.32.05",
+        "Nome": "Zani",
+        "data": "07/01/2026",
+        "Luogo": "McDonald's via Monginevro ",
+        "note": "Compleanno sale gespo"
+      },
+      {
+        "Informazioni cronologiche": "08/01/2026 12.42.20",
+        "Nome": "Easy",
+        "data": "07/01/2026",
+        "Luogo": "Mc",
+        "note": "caldo triplete"
       }
     ],
     "players": [
@@ -52,8 +66,8 @@
           "min": 0,
           "max": 5
         },
-        "firstVisit": "2026-01-01",
-        "lastVisit": "2026-01-01",
+        "firstVisit": "2026-01-07",
+        "lastVisit": "2026-01-07",
         "topLocations": [
           "mongi fuegooo"
         ],
@@ -62,14 +76,58 @@
         "monthlyAverage": 0,
         "favoriteTime": "Pranzo",
         "avatar": "assets/avatars/ale.jpg"
+      },
+      {
+        "name": "Zani",
+        "total": 1,
+        "streak": 1,
+        "level": {
+          "number": 1,
+          "name": "Principiante",
+          "color": "#808080",
+          "min": 0,
+          "max": 5
+        },
+        "firstVisit": "2026-01-07",
+        "lastVisit": "2026-01-07",
+        "topLocations": [
+          "McDonald's via Monginevro"
+        ],
+        "locationsCount": 1,
+        "notesCount": 1,
+        "monthlyAverage": 0,
+        "favoriteTime": "Pranzo",
+        "avatar": "assets/avatars/zani.jpg"
+      },
+      {
+        "name": "Easy",
+        "total": 1,
+        "streak": 1,
+        "level": {
+          "number": 1,
+          "name": "Principiante",
+          "color": "#808080",
+          "min": 0,
+          "max": 5
+        },
+        "firstVisit": "2026-01-07",
+        "lastVisit": "2026-01-07",
+        "topLocations": [
+          "Mc"
+        ],
+        "locationsCount": 1,
+        "notesCount": 1,
+        "monthlyAverage": 0,
+        "favoriteTime": "Pranzo",
+        "avatar": "assets/avatars/easy.jpg"
       }
     ],
     "stats": {
-      "totalVisits": 2,
-      "totalPlayers": 2,
-      "startDate": "2026-01-01",
+      "totalVisits": 4,
+      "totalPlayers": 4,
+      "startDate": "2026-01-07",
       "topPlayer": "Fabio",
-      "lastUpdate": "2026-01-08T11:19:39.580Z"
+      "lastUpdate": "2026-01-08T11:44:23.799Z"
     }
   }
 }
