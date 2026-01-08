@@ -2,6 +2,9 @@
 
 Un sito web per tenere traccia delle visite al McDonald's tra amici, con classifica e statistiche.
 
+Come funziona :
+La risposte vengono mandate tramite google forum e salvate su google sheet, poi si esporta in csv --> si trasforma in json con un qualsiasi sito online --> si copia incolla sovracrivendo su visits.json --> si runna update-data.js usando node update-data.js che trasforma automaticamente il file players.json --> si pusha le nuove modifiche --> fine
+
 ## 🚀 Funzionalità
 
 - **Classifica Live**: Visualizza chi va più spesso al McDonald's
