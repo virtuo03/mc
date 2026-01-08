@@ -1,0 +1,17 @@
+{
+  "name": "mc-ranking",
+  "version": "1.0.0",
+  "description": "Sistema tracciamento visite McDonald's",
+  "main": "update-data.js",
+  "scripts": {
+    "update": "node update-data.js",
+    "update-windows": "node update-data.js",
+    "dev": "npx live-server .",
+    "build": "echo 'Build completato'"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": ["mc", "ranking", "tracker"],
+  "author": "",
+  "license": "MIT"
+}
