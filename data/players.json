@@ -1,6 +1,6 @@
 {
   "success": true,
-  "timestamp": "2026-01-08T11:02:37.064Z",
+  "timestamp": "2026-01-08T11:19:39.580Z",
   "data": {
     "visits": [
       {
@@ -8,7 +8,14 @@
         "Nome": "Fabio",
         "data": "07/01/2026",
         "Luogo": "monginevro",
-        "note": "non ho manco mangiato"
+        "note": "non ho manco magiato"
+      },
+      {
+        "Informazioni cronologiche": "08/01/2026 12.17.36",
+        "Nome": "Ale",
+        "data": "01/01/2026",
+        "Luogo": "mongi fuegooo",
+        "note": "corpo no organi norauto ameloassein"
       }
     ],
     "players": [
@@ -33,14 +40,36 @@
         "monthlyAverage": 0,
         "favoriteTime": "Mattina",
         "avatar": "assets/avatars/fabio.jpg"
+      },
+      {
+        "name": "Ale",
+        "total": 1,
+        "streak": 1,
+        "level": {
+          "number": 1,
+          "name": "Principiante",
+          "color": "#808080",
+          "min": 0,
+          "max": 5
+        },
+        "firstVisit": "2026-01-01",
+        "lastVisit": "2026-01-01",
+        "topLocations": [
+          "mongi fuegooo"
+        ],
+        "locationsCount": 1,
+        "notesCount": 1,
+        "monthlyAverage": 0,
+        "favoriteTime": "Pranzo",
+        "avatar": "assets/avatars/ale.jpg"
       }
     ],
     "stats": {
-      "totalVisits": 1,
-      "totalPlayers": 1,
-      "startDate": "2026-01-07",
+      "totalVisits": 2,
+      "totalPlayers": 2,
+      "startDate": "2026-01-01",
       "topPlayer": "Fabio",
-      "lastUpdate": "2026-01-08T11:02:37.064Z"
+      "lastUpdate": "2026-01-08T11:19:39.580Z"
     }
   }
 }
