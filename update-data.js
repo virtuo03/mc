@@ -1,4 +1,4 @@
-// Script per elaborare i dati dal Google Sheets scaricato
+// Script per elaborare i dati - VERSIONE ADATTATA PER FABIO
 const fs = require('fs');
 const path = require('path');
 
@@ -19,12 +19,28 @@ function processData() {
         const rawData = fs.readFileSync(CONFIG.inputFile, 'utf8');
         const visits = JSON.parse(rawData);
         
+        if (!Array.isArray(visits)) {
+            throw new Error('Formato JSON non valido: deve essere un array');
+        }
+        
+        console.log(`📊 Letti ${visits.length} visite`);
+        
         // Raggruppa per giocatore
         const playerMap = new Map();
         
         visits.forEach(visit => {
-            const playerName = visit.Nome || visit.name;
-            if (!playerName) return;
+            // CERCA IL NOME IN TUTTE LE POSSIBILI COLONNE
+            const playerName = 
+                visit.Nome || 
+                visit.nome || 
+                visit['Nome'] || 
+                visit['nome'] || 
+                'Sconosciuto';
+            
+            if (!playerName || playerName === 'Sconosciuto') {
+                console.warn('Visita senza nome:', visit);
+                return;
+            }
             
             if (!playerMap.has(playerName)) {
                 playerMap.set(playerName, {
@@ -41,40 +57,81 @@ function processData() {
             const player = playerMap.get(playerName);
             player.visits.push(visit);
             player.total++;
-            player.dates.push(visit.Data || visit.date);
             
-            if (visit.Orario || visit.time) {
-                player.times.push(visit.Orario || visit.time);
+            // CERCA LA DATA IN TUTTE LE POSSIBILI COLONNE
+            const rawDate = 
+                visit.Data || 
+                visit.data || 
+                visit['Data'] || 
+                visit['data'] ||
+                visit['Informazioni cronologiche'] || // Potrebbe essere qui
+                '';
+            
+            if (rawDate) {
+                // Converti data italiana (dd/mm/yyyy) in formato standard (yyyy-mm-dd)
+                const formattedDate = formatItalianDate(rawDate);
+                if (formattedDate) {
+                    player.dates.push(formattedDate);
+                }
             }
             
-            if (visit.Luogo || visit.location) {
-                player.locations.add(visit.Luogo || visit.location);
+            // CERCA L'ORARIO (se c'è nel timestamp)
+            const timestamp = visit['Informazioni cronologiche'] || '';
+            if (timestamp && timestamp.includes(' ')) {
+                const parts = timestamp.split(' ');
+                if (parts.length > 1) {
+                    const timePart = parts[1].replace(/\./g, ':');
+                    player.times.push(timePart);
+                }
             }
             
-            if (visit.Note || visit.notes) {
-                player.notes.push(visit.Note || visit.notes);
+            // CERCA IL LUOGO
+            const luogo = 
+                visit.Luogo || 
+                visit.luogo || 
+                visit['Luogo'] || 
+                visit['luogo'] ||
+                '';
+            
+            if (luogo && luogo.trim()) {
+                player.locations.add(luogo.trim());
+            }
+            
+            // CERCA LE NOTE
+            const note = 
+                visit.Note || 
+                visit.note || 
+                visit['Note'] || 
+                visit['note'] ||
+                '';
+            
+            if (note && note.trim()) {
+                player.notes.push(note.trim());
             }
         });
         
-        // Calcola statistiche
+        console.log(`👥 Trovati ${playerMap.size} giocatori unici`);
+        
+        // Calcola statistiche per ogni giocatore
         const players = Array.from(playerMap.values()).map(player => {
+            console.log(`Elaboro ${player.name}: ${player.total} visite`);
+            
             // Calcola streak
             const streak = calculateStreak(player.dates);
             
-            // Calcola livello (semplice)
-            let level = 1;
-            if (player.total >= 50) level = 5;
-            else if (player.total >= 30) level = 4;
-            else if (player.total >= 15) level = 3;
-            else if (player.total >= 5) level = 2;
+            // Calcola livello
+            const level = calculateLevel(player.total);
+            
+            // Badge
+            const badges = calculateBadges(player);
             
             // Date formattate
             const sortedDates = [...new Set(player.dates)]
                 .filter(date => date)
                 .sort();
             
-            const firstVisit = sortedDates[0];
-            const lastVisit = sortedDates[sortedDates.length - 1];
+            const firstVisit = sortedDates[0] || null;
+            const lastVisit = sortedDates[sortedDates.length - 1] || null;
             
             // Luoghi più frequenti
             const topLocations = Array.from(player.locations)
@@ -92,11 +149,12 @@ function processData() {
                 locationsCount: player.locations.size,
                 notesCount: player.notes.filter(note => note && note.trim()).length,
                 monthlyAverage: calculateMonthlyAverage(player.dates),
-                favoriteTime: calculateFavoriteTime(player.times)
+                favoriteTime: calculateFavoriteTime(player.times),
+                avatar: getAvatarUrl(player.name)
             };
         });
         
-        // Ordina per visite
+        // Ordina per visite (discendente)
         players.sort((a, b) => b.total - a.total);
         
         // Statistiche globali
@@ -131,9 +189,69 @@ function processData() {
         console.log(`🏆 Top: ${stats.topPlayer}`);
         console.log(`💾 Salvato in: ${CONFIG.outputFile}`);
         
+        // Mostra anteprima classifica
+        console.log('\n🏁 CLASSIFICA:');
+        players.forEach((player, index) => {
+            console.log(`${index + 1}. ${player.name}: ${player.total} visite`);
+        });
+        
     } catch (error) {
         console.error('❌ Errore:', error.message);
+        console.error('Stack:', error.stack);
+        
+        // Crea file di errore
+        const errorOutput = {
+            success: false,
+            error: error.message,
+            timestamp: new Date().toISOString()
+        };
+        
+        fs.writeFileSync(CONFIG.outputFile, JSON.stringify(errorOutput, null, 2));
+        
         process.exit(1);
+    }
+}
+
+// Funzione per convertire data italiana (dd/mm/yyyy) in yyyy-mm-dd
+function formatItalianDate(dateString) {
+    if (!dateString) return '';
+    
+    try {
+        // Rimuovi eventuali spazi
+        const cleanDate = dateString.toString().trim();
+        
+        // Gestisci vari formati:
+        
+        // 1. Formato dd/mm/yyyy (07/01/2026)
+        if (cleanDate.match(/^\d{1,2}\/\d{1,2}\/\d{4}$/)) {
+            const [day, month, year] = cleanDate.split('/');
+            return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+        }
+        
+        // 2. Formato dd-mm-yyyy
+        if (cleanDate.match(/^\d{1,2}-\d{1,2}-\d{4}$/)) {
+            const [day, month, year] = cleanDate.split('-');
+            return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+        }
+        
+        // 3. Timestamp completo (08/01/2026 11.51.35)
+        if (cleanDate.match(/^\d{1,2}\/\d{1,2}\/\d{4} \d{1,2}\.\d{1,2}\.\d{1,2}$/)) {
+            const [datePart] = cleanDate.split(' ');
+            const [day, month, year] = datePart.split('/');
+            return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+        }
+        
+        // 4. Formato yyyy-mm-dd (già corretto)
+        if (cleanDate.match(/^\d{4}-\d{1,2}-\d{1,2}$/)) {
+            return cleanDate;
+        }
+        
+        console.warn(`Formato data non riconosciuto: "${cleanDate}"`);
+        return cleanDate;
+        
+    } catch (error) {
+        console.warn(`Errore conversione data "${dateString}":`, error.message);
+        return dateString;
     }
 }
 
@@ -171,6 +289,60 @@ function calculateStreak(dates) {
     return streak;
 }
 
+function calculateLevel(totalVisits) {
+    const LEVELS = [
+        { min: 0, max: 5, name: 'Principiante', color: '#808080' },
+        { min: 6, max: 15, name: 'Appassionato', color: '#4CAF50' },
+        { min: 16, max: 30, name: 'Esperto', color: '#2196F3' },
+        { min: 31, max: 50, name: 'Maestro', color: '#9C27B0' },
+        { min: 51, max: 100, name: 'Leggenda', color: '#FF9800' },
+        { min: 101, max: 999, name: 'McDio', color: '#FF0000' }
+    ];
+    
+    for (let i = LEVELS.length - 1; i >= 0; i--) {
+        if (totalVisits >= LEVELS[i].min) {
+            return {
+                number: i + 1,
+                name: LEVELS[i].name,
+                color: LEVELS[i].color,
+                min: LEVELS[i].min,
+                max: LEVELS[i].max
+            };
+        }
+    }
+    return { number: 1, name: 'Principiante', color: '#808080' };
+}
+
+function calculateBadges(player) {
+    const BADGES = {
+        VETERAN: { name: 'Veterano', threshold: 30, color: '#FFD700' },
+        REGULAR: { name: 'Regolare', threshold: 15, color: '#C0C0C0' },
+        STREAKER: { name: 'In Serie', threshold: 3, color: '#FF6B6B' },
+        EARLY_BIRD: { name: 'Mattiniero', threshold: 10, color: '#4ECDC4' },
+        NIGHT_OWL: { name: 'Nottambulo', threshold: 10, color: '#45B7D1' },
+        CHAMPION: { name: 'Campione', threshold: 50, color: '#FF0000' }
+    };
+    
+    const badges = [];
+    
+    // Veterano (>30 visite)
+    if (player.total >= BADGES.VETERAN.threshold) {
+        badges.push(BADGES.VETERAN);
+    }
+    
+    // Regolare (>15 visite)
+    if (player.total >= BADGES.REGULAR.threshold) {
+        badges.push(BADGES.REGULAR);
+    }
+    
+    // Streaker (streak > 3)
+    if (player.streak >= BADGES.STREAKER.threshold) {
+        badges.push(BADGES.STREAKER);
+    }
+    
+    return badges;
+}
+
 function calculateMonthlyAverage(dates) {
     if (!dates || dates.length < 2) return 0;
     
@@ -197,20 +369,40 @@ function calculateFavoriteTime(times) {
     };
     
     times.forEach(time => {
-        const hour = parseInt(time.split(':')[0]);
-        if (hour >= 6 && hour < 12) timeCategories['Mattina']++;
-        else if (hour >= 12 && hour < 15) timeCategories['Pranzo']++;
-        else if (hour >= 15 && hour < 19) timeCategories['Pomeriggio']++;
-        else if (hour >= 19 && hour < 23) timeCategories['Sera']++;
-        else timeCategories['Notte']++;
+        if (time && time.includes(':')) {
+            const hour = parseInt(time.split(':')[0]);
+            if (hour >= 6 && hour < 12) timeCategories['Mattina']++;
+            else if (hour >= 12 && hour < 15) timeCategories['Pranzo']++;
+            else if (hour >= 15 && hour < 19) timeCategories['Pomeriggio']++;
+            else if (hour >= 19 && hour < 23) timeCategories['Sera']++;
+            else timeCategories['Notte']++;
+        }
     });
     
-    return Object.entries(timeCategories)
-        .reduce((a, b) => a[1] > b[1] ? a : b)[0];
+    const entries = Object.entries(timeCategories);
+    if (entries.length === 0) return 'N/A';
+    
+    return entries.reduce((a, b) => a[1] > b[1] ? a : b)[0];
+}
+
+function getAvatarUrl(playerName) {
+    // Mappa nomi a file immagine
+    const avatarMap = {
+        'Fabio': 'fabio.jpg',
+        'Mario': 'mario.jpg',
+        'Luigi': 'luigi.jpg',
+        'Paolo': 'paolo.jpg'
+        // Aggiungi altri giocatori
+    };
+    
+    const fileName = avatarMap[playerName] || 'default.jpg';
+    return `assets/avatars/${fileName}`;
 }
 
 // Esegui
 if (require.main === module) {
+    console.log('🍔 McRanking Data Processor 🍟');
+    console.log('===============================\n');
     processData();
 }
 

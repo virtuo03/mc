@@ -1,83 +1,46 @@
 {
   "success": true,
-  "timestamp": "2026-01-08T10:45:08.565Z",
+  "timestamp": "2026-01-08T11:02:37.064Z",
   "data": {
     "visits": [
       {
-        "Nome": "Mario Rossi",
-        "Data": "2024-01-15",
-        "Orario": "12:30",
-        "Luogo": "McDrive Roma",
-        "Note": "Big Mac Menu"
-      },
-      {
-        "Nome": "Luigi Bianchi",
-        "Data": "2024-01-14",
-        "Orario": "19:45",
-        "Luogo": "McDonald's Milano",
-        "Note": "Con amici"
-      },
-      {
-        "Nome": "Paolo Verdi",
-        "Data": "2024-01-13",
-        "Orario": "08:15",
-        "Luogo": "McDonald's Napoli",
-        "Note": "Colazione"
+        "Informazioni cronologiche": "08/01/2026 11.51.35",
+        "Nome": "Fabio",
+        "data": "07/01/2026",
+        "Luogo": "monginevro",
+        "note": "non ho manco mangiato"
       }
     ],
     "players": [
       {
-        "name": "Mario Rossi",
+        "name": "Fabio",
         "total": 1,
         "streak": 1,
-        "level": 1,
-        "firstVisit": "2024-01-15",
-        "lastVisit": "2024-01-15",
+        "level": {
+          "number": 1,
+          "name": "Principiante",
+          "color": "#808080",
+          "min": 0,
+          "max": 5
+        },
+        "firstVisit": "2026-01-07",
+        "lastVisit": "2026-01-07",
         "topLocations": [
-          "McDrive Roma"
+          "monginevro"
         ],
         "locationsCount": 1,
         "notesCount": 1,
         "monthlyAverage": 0,
-        "favoriteTime": "Pranzo"
-      },
-      {
-        "name": "Luigi Bianchi",
-        "total": 1,
-        "streak": 1,
-        "level": 1,
-        "firstVisit": "2024-01-14",
-        "lastVisit": "2024-01-14",
-        "topLocations": [
-          "McDonald's Milano"
-        ],
-        "locationsCount": 1,
-        "notesCount": 1,
-        "monthlyAverage": 0,
-        "favoriteTime": "Sera"
-      },
-      {
-        "name": "Paolo Verdi",
-        "total": 1,
-        "streak": 1,
-        "level": 1,
-        "firstVisit": "2024-01-13",
-        "lastVisit": "2024-01-13",
-        "topLocations": [
-          "McDonald's Napoli"
-        ],
-        "locationsCount": 1,
-        "notesCount": 1,
-        "monthlyAverage": 0,
-        "favoriteTime": "Mattina"
+        "favoriteTime": "Mattina",
+        "avatar": "assets/avatars/fabio.jpg"
       }
     ],
     "stats": {
-      "totalVisits": 3,
-      "totalPlayers": 3,
-      "startDate": "2024-01-13",
-      "topPlayer": "Mario Rossi",
-      "lastUpdate": "2026-01-08T10:45:08.564Z"
+      "totalVisits": 1,
+      "totalPlayers": 1,
+      "startDate": "2026-01-07",
+      "topPlayer": "Fabio",
+      "lastUpdate": "2026-01-08T11:02:37.064Z"
     }
   }
 }
