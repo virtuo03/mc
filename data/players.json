@@ -1,6 +1,6 @@
 {
   "success": true,
-  "timestamp": "2026-01-08T19:37:06.524Z",
+  "timestamp": "2026-01-13T22:34:50.731Z",
   "data": {
     "visits": [
       {
@@ -65,6 +65,15 @@
         "note (panino e altro)": "NHH",
         "Indirizzo email": "",
         "Quanto sei ricco?": "7,20"
+      },
+      {
+        "Informazioni cronologiche": "13/01/2026 23.18.44",
+        "Nome": "Max",
+        "data": "13/01/2026",
+        "Luogo": "Beinasco",
+        "note (panino e altro)": "1955 + nuggets",
+        "Indirizzo email": "massimo1717@gmail.com",
+        "Quanto sei ricco?": "11,10"
       }
     ],
     "players": [
@@ -235,21 +244,51 @@
           "Comple ale"
         ],
         "avatar": "assets/avatars/zani.jpg"
+      },
+      {
+        "name": "Max",
+        "email": "massimo1717@gmail.com",
+        "total": 1,
+        "totalSpent": 11.1,
+        "averageSpend": 11.1,
+        "spendCount": 1,
+        "maxSpend": 11.1,
+        "level": {
+          "number": 1,
+          "name": "Principiante",
+          "color": "#808080"
+        },
+        "topLocations": [
+          "Beinasco"
+        ],
+        "recentVisits": [
+          {
+            "date": "13/01/2026",
+            "location": "Beinasco",
+            "spend": 11.1,
+            "note": "1955 + nuggets",
+            "timestamp": "13/01/2026 23.18.44"
+          }
+        ],
+        "notes": [
+          "1955 + nuggets"
+        ],
+        "avatar": "assets/avatars/max.jpg"
       }
     ],
     "stats": {
-      "totalVisits": 7,
-      "totalPlayers": 5,
-      "totalSpent": 58.69,
-      "averageTotalSpent": 11.74,
+      "totalVisits": 8,
+      "totalPlayers": 6,
+      "totalSpent": 69.79,
+      "averageTotalSpent": 11.63,
       "topPlayer": "Ale",
       "topSpender": "Kej",
       "topSpenderAmount": 20.3,
       "topAverageSpender": "Easy",
       "topAverageSpend": 11.6,
-      "playersWithEmail": 1,
-      "visitsWithSpend": 6,
-      "lastUpdate": "2026-01-08T19:37:06.523Z"
+      "playersWithEmail": 2,
+      "visitsWithSpend": 7,
+      "lastUpdate": "2026-01-13T22:34:50.731Z"
     }
   }
 }
