@@ -1,6 +1,6 @@
 {
   "success": true,
-  "timestamp": "2026-01-13T22:34:50.731Z",
+  "timestamp": "2026-01-25T13:06:25.839Z",
   "data": {
     "visits": [
       {
@@ -74,16 +74,61 @@
         "note (panino e altro)": "1955 + nuggets",
         "Indirizzo email": "massimo1717@gmail.com",
         "Quanto sei ricco?": "11,10"
+      },
+      {
+        "Informazioni cronologiche": "17/01/2026 2.00.58",
+        "Nome": "Ale",
+        "data": "17/01/2026",
+        "Luogo": "mongi epstein",
+        "note (panino e altro)": "e marco offre e mi segooooo",
+        "Indirizzo email": "alex037espo@gmail.com",
+        "Quanto sei ricco?": "0,00"
+      },
+      {
+        "Informazioni cronologiche": "17/01/2026 2.01.14",
+        "Nome": "Marco",
+        "data": "17/01/2026",
+        "Luogo": "via mongi caldi",
+        "note (panino e altro)": "nuggets calde",
+        "Indirizzo email": "marcospataro03@gmail.com",
+        "Quanto sei ricco?": "5,10"
+      },
+      {
+        "Informazioni cronologiche": "25/01/2026 1.40.41",
+        "Nome": "Ale",
+        "data": "25/01/2026",
+        "Luogo": "mongiiii diocaneee",
+        "note (panino e altro)": "menu crispy ",
+        "Indirizzo email": "alex037espo@gmail.com",
+        "Quanto sei ricco?": "5,99"
+      },
+      {
+        "Informazioni cronologiche": "25/01/2026 14.00.46",
+        "Nome": "Max",
+        "data": "24/01/2026",
+        "Luogo": "mongi calda",
+        "note (panino e altro)": "6 niggets e 1 double hamburger",
+        "Indirizzo email": "massimo1717@gmail.com",
+        "Quanto sei ricco?": "6,40"
+      },
+      {
+        "Informazioni cronologiche": "25/01/2026 14.04.13",
+        "Nome": "Kej",
+        "data": "23/01/2026",
+        "Luogo": "MC via mongi",
+        "note (panino e altro)": "ameloassein",
+        "Indirizzo email": "giacomo.vaira623@gmail.com",
+        "Quanto sei ricco?": "6,50"
       }
     ],
     "players": [
       {
         "name": "Ale",
-        "email": "",
-        "total": 2,
-        "totalSpent": 18.8,
-        "averageSpend": 9.4,
-        "spendCount": 2,
+        "email": "alex037espo@gmail.com",
+        "total": 4,
+        "totalSpent": 24.79,
+        "averageSpend": 6.2,
+        "spendCount": 3,
         "maxSpend": 11.6,
         "level": {
           "number": 1,
@@ -92,9 +137,24 @@
         },
         "topLocations": [
           "mongi fuegooo",
-          "monginegro"
+          "monginegro",
+          "mongi epstein"
         ],
         "recentVisits": [
+          {
+            "date": "25/01/2026",
+            "location": "mongiiii diocaneee",
+            "spend": 5.99,
+            "note": "menu crispy",
+            "timestamp": "25/01/2026 1.40.41"
+          },
+          {
+            "date": "17/01/2026",
+            "location": "mongi epstein",
+            "spend": 0,
+            "note": "e marco offre e mi segooooo",
+            "timestamp": "17/01/2026 2.00.58"
+          },
           {
             "date": "07/01/2026",
             "location": "mongi fuegooo",
@@ -112,17 +172,19 @@
         ],
         "notes": [
           "corpo no organi norauto ameloassein",
-          "NHH"
+          "NHH",
+          "e marco offre e mi segooooo",
+          "menu crispy"
         ],
         "avatar": "assets/avatars/ale.jpg"
       },
       {
         "name": "Kej",
-        "email": "",
-        "total": 2,
-        "totalSpent": 20.3,
-        "averageSpend": 10.15,
-        "spendCount": 2,
+        "email": "giacomo.vaira623@gmail.com",
+        "total": 3,
+        "totalSpent": 26.8,
+        "averageSpend": 8.93,
+        "spendCount": 3,
         "maxSpend": 11.4,
         "level": {
           "number": 1,
@@ -131,9 +193,17 @@
         },
         "topLocations": [
           "mc via mongi (casa max)",
-          "mc via mongi (casa Easy fix)"
+          "mc via mongi (casa Easy fix)",
+          "MC via mongi"
         ],
         "recentVisits": [
+          {
+            "date": "23/01/2026",
+            "location": "MC via mongi",
+            "spend": 6.5,
+            "note": "ameloassein",
+            "timestamp": "25/01/2026 14.04.13"
+          },
           {
             "date": "07/01/2026",
             "location": "mc via mongi (casa Easy fix)",
@@ -151,9 +221,49 @@
         ],
         "notes": [
           "i am Charlie Kirk",
-          "odio il trio delle zecche"
+          "odio il trio delle zecche",
+          "ameloassein"
         ],
         "avatar": "assets/avatars/kej.jpg"
+      },
+      {
+        "name": "Max",
+        "email": "massimo1717@gmail.com",
+        "total": 2,
+        "totalSpent": 17.5,
+        "averageSpend": 8.75,
+        "spendCount": 2,
+        "maxSpend": 11.1,
+        "level": {
+          "number": 1,
+          "name": "Principiante",
+          "color": "#808080"
+        },
+        "topLocations": [
+          "Beinasco",
+          "mongi calda"
+        ],
+        "recentVisits": [
+          {
+            "date": "24/01/2026",
+            "location": "mongi calda",
+            "spend": 6.4,
+            "note": "6 niggets e 1 double hamburger",
+            "timestamp": "25/01/2026 14.00.46"
+          },
+          {
+            "date": "13/01/2026",
+            "location": "Beinasco",
+            "spend": 11.1,
+            "note": "1955 + nuggets",
+            "timestamp": "13/01/2026 23.18.44"
+          }
+        ],
+        "notes": [
+          "1955 + nuggets",
+          "6 niggets e 1 double hamburger"
+        ],
+        "avatar": "assets/avatars/max.jpg"
       },
       {
         "name": "Fabio",
@@ -246,49 +356,49 @@
         "avatar": "assets/avatars/zani.jpg"
       },
       {
-        "name": "Max",
-        "email": "massimo1717@gmail.com",
+        "name": "Marco",
+        "email": "marcospataro03@gmail.com",
         "total": 1,
-        "totalSpent": 11.1,
-        "averageSpend": 11.1,
+        "totalSpent": 5.1,
+        "averageSpend": 5.1,
         "spendCount": 1,
-        "maxSpend": 11.1,
+        "maxSpend": 5.1,
         "level": {
           "number": 1,
           "name": "Principiante",
           "color": "#808080"
         },
         "topLocations": [
-          "Beinasco"
+          "via mongi caldi"
         ],
         "recentVisits": [
           {
-            "date": "13/01/2026",
-            "location": "Beinasco",
-            "spend": 11.1,
-            "note": "1955 + nuggets",
-            "timestamp": "13/01/2026 23.18.44"
+            "date": "17/01/2026",
+            "location": "via mongi caldi",
+            "spend": 5.1,
+            "note": "nuggets calde",
+            "timestamp": "17/01/2026 2.01.14"
           }
         ],
         "notes": [
-          "1955 + nuggets"
+          "nuggets calde"
         ],
-        "avatar": "assets/avatars/max.jpg"
+        "avatar": "assets/avatars/marco.jpg"
       }
     ],
     "stats": {
-      "totalVisits": 8,
-      "totalPlayers": 6,
-      "totalSpent": 69.79,
-      "averageTotalSpent": 11.63,
+      "totalVisits": 13,
+      "totalPlayers": 7,
+      "totalSpent": 93.78,
+      "averageTotalSpent": 13.4,
       "topPlayer": "Ale",
       "topSpender": "Kej",
-      "topSpenderAmount": 20.3,
+      "topSpenderAmount": 26.8,
       "topAverageSpender": "Easy",
       "topAverageSpend": 11.6,
-      "playersWithEmail": 2,
-      "visitsWithSpend": 7,
-      "lastUpdate": "2026-01-13T22:34:50.731Z"
+      "playersWithEmail": 5,
+      "visitsWithSpend": 11,
+      "lastUpdate": "2026-01-25T13:06:25.839Z"
     }
   }
 }
