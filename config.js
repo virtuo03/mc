@@ -15,12 +15,14 @@ const CONFIG = {
 
     // Livelli
     LEVELS: [
-        { min: 1, max: 3, name: '🍟 Novizio', color: '#808080' },
-        { min: 4, max: 10, name: '🍔 Amante', color: '#4CAF50' },
-        { min: 11, max: 20, name: '👑 Fanatico', color: '#2196F3' },
-        { min: 21, max: 30, name: '🏆 Professionista', color: '#9C27B0' },
-        { min: 31, max: 50, name: '💎 Mitico', color: '#FF9800' },
-        { min: 67, max: 365, name: 'GOAT', color: '#FF0000' }
+        { min: 1, max: 3, name: '🍟 Salvaeuro', color: '#808080' },
+        { min: 4, max: 6, name: '🍔 Crispy Nigga Lover', color: '#4CAF50' },
+        { min: 7, max: 10, name: '🍔 theproplayer', color: '#4CAF50' },
+        { min: 11, max: 16, name: '👑 Chicken Epstein McBacon', color: '#2196F3' },
+        { min: 17, max: 21, name: '🍔 may', color: '#9C27B0' },
+        { min: 22, max: 30, name: '🏆 Zampa', color: '#9C27B0' },
+        { min: 31, max: 50, name: '💎 obeso di merda', color: '#FF9800' },
+        { min: 67, max: 365, name: 'Charlie Kirk', color: '#FF0000' }
     ],
 
     // Filtri di default
