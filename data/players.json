@@ -1,6 +1,6 @@
 {
   "success": true,
-  "timestamp": "2026-01-25T13:06:25.839Z",
+  "timestamp": "2026-02-12T19:50:22.660Z",
   "data": {
     "visits": [
       {
@@ -119,6 +119,24 @@
         "note (panino e altro)": "ameloassein",
         "Indirizzo email": "giacomo.vaira623@gmail.com",
         "Quanto sei ricco?": "6,50"
+      },
+      {
+        "Informazioni cronologiche": "10/02/2026 13.08.58",
+        "Nome": "Zani",
+        "data": "10/02/2026",
+        "Luogo": "Serravalle Outlet",
+        "note (panino e altro)": "Menu crispy grande",
+        "Indirizzo email": "davidezanibellato03@gmail.com",
+        "Quanto sei ricco?": "9,80"
+      },
+      {
+        "Informazioni cronologiche": "11/02/2026 23.13.31",
+        "Nome": "Max",
+        "data": "27/01/2026",
+        "Luogo": "Monginegro",
+        "note (panino e altro)": "panino niggers",
+        "Indirizzo email": "massimo1717@gmail.com",
+        "Quanto sei ricco?": "8,79"
       }
     ],
     "players": [
@@ -229,10 +247,10 @@
       {
         "name": "Max",
         "email": "massimo1717@gmail.com",
-        "total": 2,
-        "totalSpent": 17.5,
-        "averageSpend": 8.75,
-        "spendCount": 2,
+        "total": 3,
+        "totalSpent": 26.29,
+        "averageSpend": 8.76,
+        "spendCount": 3,
         "maxSpend": 11.1,
         "level": {
           "number": 1,
@@ -241,9 +259,17 @@
         },
         "topLocations": [
           "Beinasco",
-          "mongi calda"
+          "mongi calda",
+          "Monginegro"
         ],
         "recentVisits": [
+          {
+            "date": "27/01/2026",
+            "location": "Monginegro",
+            "spend": 8.79,
+            "note": "panino niggers",
+            "timestamp": "11/02/2026 23.13.31"
+          },
           {
             "date": "24/01/2026",
             "location": "mongi calda",
@@ -261,9 +287,49 @@
         ],
         "notes": [
           "1955 + nuggets",
-          "6 niggets e 1 double hamburger"
+          "6 niggets e 1 double hamburger",
+          "panino niggers"
         ],
         "avatar": "assets/avatars/max.jpg"
+      },
+      {
+        "name": "Zani",
+        "email": "davidezanibellato03@gmail.com",
+        "total": 2,
+        "totalSpent": 17.79,
+        "averageSpend": 8.9,
+        "spendCount": 2,
+        "maxSpend": 9.8,
+        "level": {
+          "number": 1,
+          "name": "Principiante",
+          "color": "#808080"
+        },
+        "topLocations": [
+          "Via Monginevro",
+          "Serravalle Outlet"
+        ],
+        "recentVisits": [
+          {
+            "date": "10/02/2026",
+            "location": "Serravalle Outlet",
+            "spend": 9.8,
+            "note": "Menu crispy grande",
+            "timestamp": "10/02/2026 13.08.58"
+          },
+          {
+            "date": "07/01/2026",
+            "location": "Via Monginevro ",
+            "spend": 7.99,
+            "note": "Comple ale",
+            "timestamp": "08/01/2026 12.45.36"
+          }
+        ],
+        "notes": [
+          "Comple ale",
+          "Menu crispy grande"
+        ],
+        "avatar": "assets/avatars/zani.jpg"
       },
       {
         "name": "Fabio",
@@ -326,36 +392,6 @@
         "avatar": "assets/avatars/easy.jpg"
       },
       {
-        "name": "Zani",
-        "email": "",
-        "total": 1,
-        "totalSpent": 7.99,
-        "averageSpend": 7.99,
-        "spendCount": 1,
-        "maxSpend": 7.99,
-        "level": {
-          "number": 1,
-          "name": "Principiante",
-          "color": "#808080"
-        },
-        "topLocations": [
-          "Via Monginevro"
-        ],
-        "recentVisits": [
-          {
-            "date": "07/01/2026",
-            "location": "Via Monginevro ",
-            "spend": 7.99,
-            "note": "Comple ale",
-            "timestamp": "08/01/2026 12.45.36"
-          }
-        ],
-        "notes": [
-          "Comple ale"
-        ],
-        "avatar": "assets/avatars/zani.jpg"
-      },
-      {
         "name": "Marco",
         "email": "marcospataro03@gmail.com",
         "total": 1,
@@ -387,18 +423,18 @@
       }
     ],
     "stats": {
-      "totalVisits": 13,
+      "totalVisits": 15,
       "totalPlayers": 7,
-      "totalSpent": 93.78,
-      "averageTotalSpent": 13.4,
+      "totalSpent": 112.37,
+      "averageTotalSpent": 16.05,
       "topPlayer": "Ale",
       "topSpender": "Kej",
       "topSpenderAmount": 26.8,
       "topAverageSpender": "Easy",
       "topAverageSpend": 11.6,
-      "playersWithEmail": 5,
-      "visitsWithSpend": 11,
-      "lastUpdate": "2026-01-25T13:06:25.839Z"
+      "playersWithEmail": 6,
+      "visitsWithSpend": 13,
+      "lastUpdate": "2026-02-12T19:50:22.660Z"
     }
   }
 }

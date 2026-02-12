@@ -1,119 +1,137 @@
 [
- {
-   "Informazioni cronologiche": "08/01/2026 11.51.35",
-   "Nome": "Fabio",
-   "data": "07/01/2026",
-   "Luogo": "monginevro",
-   "note (panino e altro)": "non ho manco magiato",
-   "Indirizzo email": "fabiorovituso@gmail.com",
-   "Quanto sei ricco?": "0,00"
- },
- {
-   "Informazioni cronologiche": "08/01/2026 12.17.36",
-   "Nome": "Ale",
-   "data": "07/01/2026",
-   "Luogo": "mongi fuegooo",
-   "note (panino e altro)": "corpo no organi norauto ameloassein",
-   "Indirizzo email": "",
-   "Quanto sei ricco?": "11,60"
- },
- {
-   "Informazioni cronologiche": "08/01/2026 12.42.20",
-   "Nome": "Easy",
-   "data": "07/01/2026",
-   "Luogo": "Mc",
-   "note (panino e altro)": "caldo triplete",
-   "Indirizzo email": "",
-   "Quanto sei ricco?": "11,60"
- },
- {
-   "Informazioni cronologiche": "08/01/2026 12.43.59",
-   "Nome": "Kej",
-   "data": "02/01/2026",
-   "Luogo": "mc via mongi (casa max)",
-   "note (panino e altro)": "i am Charlie Kirk ",
-   "Indirizzo email": "",
-   "Quanto sei ricco?": "8,90"
- },
- {
-   "Informazioni cronologiche": "08/01/2026 12.44.44",
-   "Nome": "Kej",
-   "data": "07/01/2026",
-   "Luogo": "mc via mongi (casa Easy fix)",
-   "note (panino e altro)": "odio il trio delle zecche",
-   "Indirizzo email": "",
-   "Quanto sei ricco?": "11,40"
- },
- {
-   "Informazioni cronologiche": "08/01/2026 12.45.36",
-   "Nome": "Zani",
-   "data": "07/01/2026",
-   "Luogo": "Via Monginevro ",
-   "note (panino e altro)": "Comple ale",
-   "Indirizzo email": "",
-   "Quanto sei ricco?": "7,99"
- },
- {
-   "Informazioni cronologiche": "08/01/2026 12.56.47",
-   "Nome": "Ale",
-   "data": "01/01/2026",
-   "Luogo": "monginegro",
-   "note (panino e altro)": "NHH",
-   "Indirizzo email": "",
-   "Quanto sei ricco?": "7,20"
- },
- {
-   "Informazioni cronologiche": "13/01/2026 23.18.44",
-   "Nome": "Max",
-   "data": "13/01/2026",
-   "Luogo": "Beinasco",
-   "note (panino e altro)": "1955 + nuggets",
-   "Indirizzo email": "massimo1717@gmail.com",
-   "Quanto sei ricco?": "11,10"
- },
- {
-   "Informazioni cronologiche": "17/01/2026 2.00.58",
-   "Nome": "Ale",
-   "data": "17/01/2026",
-   "Luogo": "mongi epstein",
-   "note (panino e altro)": "e marco offre e mi segooooo",
-   "Indirizzo email": "alex037espo@gmail.com",
-   "Quanto sei ricco?": "0,00"
- },
- {
-   "Informazioni cronologiche": "17/01/2026 2.01.14",
-   "Nome": "Marco",
-   "data": "17/01/2026",
-   "Luogo": "via mongi caldi",
-   "note (panino e altro)": "nuggets calde",
-   "Indirizzo email": "marcospataro03@gmail.com",
-   "Quanto sei ricco?": "5,10"
- },
- {
-   "Informazioni cronologiche": "25/01/2026 1.40.41",
-   "Nome": "Ale",
-   "data": "25/01/2026",
-   "Luogo": "mongiiii diocaneee",
-   "note (panino e altro)": "menu crispy ",
-   "Indirizzo email": "alex037espo@gmail.com",
-   "Quanto sei ricco?": "5,99"
- },
- {
-   "Informazioni cronologiche": "25/01/2026 14.00.46",
-   "Nome": "Max",
-   "data": "24/01/2026",
-   "Luogo": "mongi calda",
-   "note (panino e altro)": "6 niggets e 1 double hamburger",
-   "Indirizzo email": "massimo1717@gmail.com",
-   "Quanto sei ricco?": "6,40"
- },
- {
-   "Informazioni cronologiche": "25/01/2026 14.04.13",
-   "Nome": "Kej",
-   "data": "23/01/2026",
-   "Luogo": "MC via mongi",
-   "note (panino e altro)": "ameloassein",
-   "Indirizzo email": "giacomo.vaira623@gmail.com",
-   "Quanto sei ricco?": "6,50"
- }
+  {
+    "Informazioni cronologiche": "08/01/2026 11.51.35",
+    "Nome": "Fabio",
+    "data": "07/01/2026",
+    "Luogo": "monginevro",
+    "note (panino e altro)": "non ho manco magiato",
+    "Indirizzo email": "fabiorovituso@gmail.com",
+    "Quanto sei ricco?": "0,00"
+  },
+  {
+    "Informazioni cronologiche": "08/01/2026 12.17.36",
+    "Nome": "Ale",
+    "data": "07/01/2026",
+    "Luogo": "mongi fuegooo",
+    "note (panino e altro)": "corpo no organi norauto ameloassein",
+    "Indirizzo email": "",
+    "Quanto sei ricco?": "11,60"
+  },
+  {
+    "Informazioni cronologiche": "08/01/2026 12.42.20",
+    "Nome": "Easy",
+    "data": "07/01/2026",
+    "Luogo": "Mc",
+    "note (panino e altro)": "caldo triplete",
+    "Indirizzo email": "",
+    "Quanto sei ricco?": "11,60"
+  },
+  {
+    "Informazioni cronologiche": "08/01/2026 12.43.59",
+    "Nome": "Kej",
+    "data": "02/01/2026",
+    "Luogo": "mc via mongi (casa max)",
+    "note (panino e altro)": "i am Charlie Kirk ",
+    "Indirizzo email": "",
+    "Quanto sei ricco?": "8,90"
+  },
+  {
+    "Informazioni cronologiche": "08/01/2026 12.44.44",
+    "Nome": "Kej",
+    "data": "07/01/2026",
+    "Luogo": "mc via mongi (casa Easy fix)",
+    "note (panino e altro)": "odio il trio delle zecche",
+    "Indirizzo email": "",
+    "Quanto sei ricco?": "11,40"
+  },
+  {
+    "Informazioni cronologiche": "08/01/2026 12.45.36",
+    "Nome": "Zani",
+    "data": "07/01/2026",
+    "Luogo": "Via Monginevro ",
+    "note (panino e altro)": "Comple ale",
+    "Indirizzo email": "",
+    "Quanto sei ricco?": "7,99"
+  },
+  {
+    "Informazioni cronologiche": "08/01/2026 12.56.47",
+    "Nome": "Ale",
+    "data": "01/01/2026",
+    "Luogo": "monginegro",
+    "note (panino e altro)": "NHH",
+    "Indirizzo email": "",
+    "Quanto sei ricco?": "7,20"
+  },
+  {
+    "Informazioni cronologiche": "13/01/2026 23.18.44",
+    "Nome": "Max",
+    "data": "13/01/2026",
+    "Luogo": "Beinasco",
+    "note (panino e altro)": "1955 + nuggets",
+    "Indirizzo email": "massimo1717@gmail.com",
+    "Quanto sei ricco?": "11,10"
+  },
+  {
+    "Informazioni cronologiche": "17/01/2026 2.00.58",
+    "Nome": "Ale",
+    "data": "17/01/2026",
+    "Luogo": "mongi epstein",
+    "note (panino e altro)": "e marco offre e mi segooooo",
+    "Indirizzo email": "alex037espo@gmail.com",
+    "Quanto sei ricco?": "0,00"
+  },
+  {
+    "Informazioni cronologiche": "17/01/2026 2.01.14",
+    "Nome": "Marco",
+    "data": "17/01/2026",
+    "Luogo": "via mongi caldi",
+    "note (panino e altro)": "nuggets calde",
+    "Indirizzo email": "marcospataro03@gmail.com",
+    "Quanto sei ricco?": "5,10"
+  },
+  {
+    "Informazioni cronologiche": "25/01/2026 1.40.41",
+    "Nome": "Ale",
+    "data": "25/01/2026",
+    "Luogo": "mongiiii diocaneee",
+    "note (panino e altro)": "menu crispy ",
+    "Indirizzo email": "alex037espo@gmail.com",
+    "Quanto sei ricco?": "5,99"
+  },
+  {
+    "Informazioni cronologiche": "25/01/2026 14.00.46",
+    "Nome": "Max",
+    "data": "24/01/2026",
+    "Luogo": "mongi calda",
+    "note (panino e altro)": "6 niggets e 1 double hamburger",
+    "Indirizzo email": "massimo1717@gmail.com",
+    "Quanto sei ricco?": "6,40"
+  },
+  {
+    "Informazioni cronologiche": "25/01/2026 14.04.13",
+    "Nome": "Kej",
+    "data": "23/01/2026",
+    "Luogo": "MC via mongi",
+    "note (panino e altro)": "ameloassein",
+    "Indirizzo email": "giacomo.vaira623@gmail.com",
+    "Quanto sei ricco?": "6,50"
+  },
+  {
+    "Informazioni cronologiche": "10/02/2026 13.08.58",
+    "Nome": "Zani",
+    "data": "10/02/2026",
+    "Luogo": "Serravalle Outlet",
+    "note (panino e altro)": "Menu crispy grande",
+    "Indirizzo email": "davidezanibellato03@gmail.com",
+    "Quanto sei ricco?": "9,80"
+  },
+  {
+    "Informazioni cronologiche": "11/02/2026 23.13.31",
+    "Nome": "Max",
+    "data": "27/01/2026",
+    "Luogo": "Monginegro",
+    "note (panino e altro)": "panino niggers",
+    "Indirizzo email": "massimo1717@gmail.com",
+    "Quanto sei ricco?": "8,79"
+  }
 ]
