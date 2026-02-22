@@ -1,6 +1,6 @@
 {
   "success": true,
-  "timestamp": "2026-02-12T19:50:22.660Z",
+  "timestamp": "2026-02-22T09:15:04.486Z",
   "data": {
     "visits": [
       {
@@ -137,6 +137,24 @@
         "note (panino e altro)": "panino niggers",
         "Indirizzo email": "massimo1717@gmail.com",
         "Quanto sei ricco?": "8,79"
+      },
+      {
+        "Informazioni cronologiche": "12/02/2026 21.23.25",
+        "Nome": "Zani",
+        "data": "12/02/2026",
+        "Luogo": "McDonald's Asti, corso Torino",
+        "note (panino e altro)": "Gran crispy ",
+        "Indirizzo email": "davidezanibellato03@gmail.com",
+        "Quanto sei ricco?": "0,00"
+      },
+      {
+        "Informazioni cronologiche": "21/02/2026 17.18.18",
+        "Nome": "Easy",
+        "data": "21/02/2026",
+        "Luogo": "Mongi",
+        "note (panino e altro)": "grande fottuto arco",
+        "Indirizzo email": "lolloccc@gmail.com",
+        "Quanto sei ricco?": "13,00"
       }
     ],
     "players": [
@@ -245,6 +263,54 @@
         "avatar": "assets/avatars/kej.jpg"
       },
       {
+        "name": "Zani",
+        "email": "davidezanibellato03@gmail.com",
+        "total": 3,
+        "totalSpent": 17.79,
+        "averageSpend": 5.93,
+        "spendCount": 2,
+        "maxSpend": 9.8,
+        "level": {
+          "number": 1,
+          "name": "Principiante",
+          "color": "#808080"
+        },
+        "topLocations": [
+          "Via Monginevro",
+          "Serravalle Outlet",
+          "McDonald's Asti, corso Torino"
+        ],
+        "recentVisits": [
+          {
+            "date": "12/02/2026",
+            "location": "McDonald's Asti, corso Torino",
+            "spend": 0,
+            "note": "Gran crispy",
+            "timestamp": "12/02/2026 21.23.25"
+          },
+          {
+            "date": "10/02/2026",
+            "location": "Serravalle Outlet",
+            "spend": 9.8,
+            "note": "Menu crispy grande",
+            "timestamp": "10/02/2026 13.08.58"
+          },
+          {
+            "date": "07/01/2026",
+            "location": "Via Monginevro ",
+            "spend": 7.99,
+            "note": "Comple ale",
+            "timestamp": "08/01/2026 12.45.36"
+          }
+        ],
+        "notes": [
+          "Comple ale",
+          "Menu crispy grande",
+          "Gran crispy"
+        ],
+        "avatar": "assets/avatars/zani.jpg"
+      },
+      {
         "name": "Max",
         "email": "massimo1717@gmail.com",
         "total": 3,
@@ -293,43 +359,43 @@
         "avatar": "assets/avatars/max.jpg"
       },
       {
-        "name": "Zani",
-        "email": "davidezanibellato03@gmail.com",
+        "name": "Easy",
+        "email": "lolloccc@gmail.com",
         "total": 2,
-        "totalSpent": 17.79,
-        "averageSpend": 8.9,
+        "totalSpent": 24.6,
+        "averageSpend": 12.3,
         "spendCount": 2,
-        "maxSpend": 9.8,
+        "maxSpend": 13,
         "level": {
           "number": 1,
           "name": "Principiante",
           "color": "#808080"
         },
         "topLocations": [
-          "Via Monginevro",
-          "Serravalle Outlet"
+          "Mc",
+          "Mongi"
         ],
         "recentVisits": [
           {
-            "date": "10/02/2026",
-            "location": "Serravalle Outlet",
-            "spend": 9.8,
-            "note": "Menu crispy grande",
-            "timestamp": "10/02/2026 13.08.58"
+            "date": "21/02/2026",
+            "location": "Mongi",
+            "spend": 13,
+            "note": "grande fottuto arco",
+            "timestamp": "21/02/2026 17.18.18"
           },
           {
             "date": "07/01/2026",
-            "location": "Via Monginevro ",
-            "spend": 7.99,
-            "note": "Comple ale",
-            "timestamp": "08/01/2026 12.45.36"
+            "location": "Mc",
+            "spend": 11.6,
+            "note": "caldo triplete",
+            "timestamp": "08/01/2026 12.42.20"
           }
         ],
         "notes": [
-          "Comple ale",
-          "Menu crispy grande"
+          "caldo triplete",
+          "grande fottuto arco"
         ],
-        "avatar": "assets/avatars/zani.jpg"
+        "avatar": "assets/avatars/easy.jpg"
       },
       {
         "name": "Fabio",
@@ -360,36 +426,6 @@
           "non ho manco magiato"
         ],
         "avatar": "assets/avatars/fabio.jpg"
-      },
-      {
-        "name": "Easy",
-        "email": "",
-        "total": 1,
-        "totalSpent": 11.6,
-        "averageSpend": 11.6,
-        "spendCount": 1,
-        "maxSpend": 11.6,
-        "level": {
-          "number": 1,
-          "name": "Principiante",
-          "color": "#808080"
-        },
-        "topLocations": [
-          "Mc"
-        ],
-        "recentVisits": [
-          {
-            "date": "07/01/2026",
-            "location": "Mc",
-            "spend": 11.6,
-            "note": "caldo triplete",
-            "timestamp": "08/01/2026 12.42.20"
-          }
-        ],
-        "notes": [
-          "caldo triplete"
-        ],
-        "avatar": "assets/avatars/easy.jpg"
       },
       {
         "name": "Marco",
@@ -423,18 +459,18 @@
       }
     ],
     "stats": {
-      "totalVisits": 15,
+      "totalVisits": 17,
       "totalPlayers": 7,
-      "totalSpent": 112.37,
-      "averageTotalSpent": 16.05,
+      "totalSpent": 125.37,
+      "averageTotalSpent": 17.91,
       "topPlayer": "Ale",
       "topSpender": "Kej",
       "topSpenderAmount": 26.8,
       "topAverageSpender": "Easy",
-      "topAverageSpend": 11.6,
-      "playersWithEmail": 6,
-      "visitsWithSpend": 13,
-      "lastUpdate": "2026-02-12T19:50:22.660Z"
+      "topAverageSpend": 12.3,
+      "playersWithEmail": 7,
+      "visitsWithSpend": 14,
+      "lastUpdate": "2026-02-22T09:15:04.477Z"
     }
   }
 }
